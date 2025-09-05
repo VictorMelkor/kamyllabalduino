@@ -7,10 +7,10 @@ header {
     left: 0;
     width: 100vw;
     z-index: 1000;
-    background-color: var(--color-terra-cotta);
+    background-color: var(--color-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 30px rgba(0,0,0);
 }
 
 
@@ -39,31 +39,49 @@ header {
 .menu-logo .logo {
     font-size: 1.2rem;
     display: inline-block;
-    color: var(--color-terra-cotta);
+    color: var(--color-dark-teal);
 }
 
-/* Menu base (mobile) */
+/* =========================
+   MENU BASE (MOBILE)
+========================= */
 .menu {
-    position: fixed; /* ocupa toda a tela */
+    position: fixed;
     top: 0;
-    right: -100%; /* fora da tela inicialmente */
-    width: 80%; /* menu ocupa 80% da largura da tela */
-    height: 100vh; /* altura total da tela */
-    background-color: var(--color-dark-teal);
-    opacity: 98%;
-    backdrop-filter: blur(8px);
+    left: 0; /* menu fixo à esquerda */
+    width: 80%;           /* ocupa 80% da largura da tela */
+    height: 100vh;        /* altura total da tela */
+    background-color:rgba(229, 225, 221, .96);
+    backdrop-filter: blur(8px); /* vidro fosco */
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 1rem;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -4px 0 12px rgba(0,0,0,0.35);
+    transform: translateX(-100%); /* escondido fora da tela à esquerda */
+    transition: transform 0.5s ease-in-out; /* animação suave */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.35); /* sombra à direita */
+    z-index: 999;
 }
 
 /* Menu aberto */
 .menu.show {
-    right: 0; /* entra da direita */
+    transform: translateX(0); /* desliza suavemente para dentro da tela */
 }
+
+/* =========================
+   LINKS DO MENU
+========================= */
+.menu li a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: var(--color-accent);
+}
+
 
 .menu a {
     font-size: 1.2rem;
@@ -71,13 +89,13 @@ header {
 
 .menu li a {
     padding: 0.5rem 1rem;
-    color: var(--color-bg);
+    color: var(--color-dark-teal);
     transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .menu li a:hover,
 .menu li a:focus {
-    color: var(--color-dark-teal);
+    color: var(--color-terra-cotta);
     outline: none;
     
 }
@@ -97,6 +115,27 @@ header {
     border: none;
     cursor: pointer;
     color: var(--color-dark-teal);
+    
+}
+
+.custom-shape-divider-top-1757090232 {
+    position: absolute;
+    top: 80;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1757090232 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 35px;
+}
+
+.custom-shape-divider-top-1757090232 .shape-fill {
+    fill: var(--color-bg);
 }
 
 

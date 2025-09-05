@@ -1,17 +1,28 @@
-const thumbnail = document.querySelector('.video-thumbnail');
-const overlay = document.querySelector('.video-overlay');
-const closeBtn = document.querySelector('.close-video');
-const video = overlay.querySelector('video');
+// Seleciona elementos
+const videoThumbnail = document.querySelector('.hero-photo');
+const videoOverlay = document.querySelector('.video-overlay');
+const closeVideoBtn = document.querySelector('.close-video');
+const video = videoOverlay.querySelector('video');
 
-// Abrir overlay
-thumbnail.addEventListener('click', () => {
-    overlay.style.display = 'flex';
-    video.currentTime = 0;
+// Função para abrir overlay
+videoThumbnail.addEventListener('click', () => {
+    videoOverlay.style.display = 'flex';
     video.play();
 });
 
-// Fechar overlay
-closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
+// Função para fechar overlay
+function closeVideo() {
     video.pause();
+    video.currentTime = 0; // opcional, reinicia o vídeo
+    videoOverlay.style.display = 'none';
+}
+
+// Botão fechar
+closeVideoBtn.addEventListener('click', closeVideo);
+
+// Clique fora do vídeo fecha overlay
+videoOverlay.addEventListener('click', (e) => {
+    if (e.target === videoOverlay) {
+        closeVideo();
+    }
 });

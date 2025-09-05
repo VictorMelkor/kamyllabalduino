@@ -47,14 +47,14 @@ function handleGesture() {
     const minSwipe = 50; // distância mínima em px para considerar swipe
 
     if (Math.abs(swipeDistance) > minSwipe) {
-        if (swipeDistance < 0) {
-            // direita -> esquerda (abre)
+        if (swipeDistance > 0) {
+            // direita -> abre
             if (!menu.classList.contains('show')) {
                 menu.classList.add('show');
                 menuToggle.setAttribute('aria-expanded', 'true');
             }
         } else {
-            // esquerda -> direita (fecha)
+            // esquerda -> fecha
             if (menu.classList.contains('show')) {
                 menu.classList.remove('show');
                 menuToggle.setAttribute('aria-expanded', 'false');

@@ -12,55 +12,110 @@
     border-radius: 10px;
 }
 
+/* =========================
+   HERO MEDIA (FOTO / VÍDEO)
+========================= */
+.hero-media {
+    width: 100%;
+    max-width: 400px; /* tamanho máximo da foto no mobile */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.hero-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
 .hero-content h1 {
-    font-size: 1.75rem;
+    font-size: 1.26rem;
     font-weight: 700;
-    color: var(--color-bg);
+    color: var(--color-dark-teal);
     margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
 .hero-content p {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-bg);
+    color: var(--color-dark-teal);
     margin: 0 0 0.5rem 0;
-    text-align: left;
+    text-align: left; /* alinhamento à esquerda para leitura mais fácil */
 }
 
-.cta-whatsapp.button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    margin: 1rem 0.5rem;
+/* =========================
+   BOTÕES CTA
+========================= */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
     width: 100%;
-    background-color: var(--color-terra-cotta);
-    color: var(--color-bg);
-    border-radius: 10px;
-    font-weight: 600;
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    margin-top: 1.5rem;
 }
 
+.cta-whatsapp.button,
 .cta-sobre.button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    margin: 0.5rem 0.5rem;
     width: 100%;
-    border: 1px solid var(--color-terra-cotta);
-    color: var(--color-terra-cotta);
+    text-align: center;
     border-radius: 10px;
     font-weight: 600;
     transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
+.cta-whatsapp.button {
+    background-color: var(--color-dark-teal);
+    color: var(--color-bg);
+}
+
 .cta-whatsapp.button:hover,
-.cta-whatsapp.button:focus {
-    background-color: var(--color-wine);
-    transform: translateY(-2px);
-    outline: 2px solid var(--color-dark-teal);
+.cta-whatsapp.button:focus,
+.cta-sobre.button:hover,
+.cta-sobre.button:focus {
+    background-color: var(--color-terra-cotta);
+    transform: translateY(-5px);
+    border: none;
+    color: var(--color-bg);
+    
+}
+
+.cta-sobre.button {
+    border: 2px solid var(--color-dark-teal);
+    color: var(--color-dark-teal);
 }
 
 /* =========================
    HERO VIDEO / LIGHTBOX
 ========================= */
+.hero-video,
+.video-overlay,
+.video-wrapper,
+.video-thumbnail,
+.close-video {
+    box-sizing: border-box;
+}
+
+.close-video {
+    position: absolute;
+    top: 1rem;      /* dentro do vídeo */
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10;     /* garante que fique acima do vídeo */
+}
+
+
 .hero-video {
     width: 100%;
     max-width: 720px;
@@ -68,39 +123,34 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
-/* Imagem de capa clicável */
 .video-thumbnail {
     width: 100%;
     border-radius: 10px;
     display: block;
-    margin-bottom: 1rem;
-    
 }
 
-/* Overlay do vídeo */
 .video-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.85);
-    display: none; /* inicialmente escondido */
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 2000;
 }
 
-/* Container do vídeo dentro do overlay */
 .video-wrapper {
     position: relative;
     width: 90%;
     max-width: 900px;
 }
 
-/* Botão de fechar */
 .close-video {
     position: absolute;
     top: -2rem;
@@ -112,7 +162,6 @@
     cursor: pointer;
 }
 
-/* Vídeo */
 .video-wrapper video {
     width: 100%;
     height: auto;
@@ -121,51 +170,111 @@
 }
 
 /* =========================
-   MEDIA QUERIES HERO
+   SHAPE DIVIDER
 ========================= */
-
-/* Tablets 600px+ */
-@media (min-width: 768px) {
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
-    align-items: center;
-    text-align: left;
-    column-gap: 2rem;
-  }
-
-  .hero-content {
-    grid-column: 1;
-  }
-
-  .hero-video {
-    grid-column: 2;
-    grid-row: 1 / -1; /* ocupa todas as linhas */
-    max-width: 100%;
-    align-self: end;
-  }
+.custom-shape-divider-top-1757088877 {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
+.custom-shape-divider-top-1757088877 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
 
+.custom-shape-divider-top-1757088877 .shape-fill {
+    fill: var(--color-bg);
+}
+
+/* =========================
+   RESPONSIVIDADE MOBILE-FIRST
+========================= */
+/* =========================
+   MEDIA QUERIES HERO
+   ORDEM CRESCENTE
+========================= */
+
+/* Tablets 768px+ */
+@media (min-width: 768px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+        align-items: center;
+        text-align: left;
+        column-gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* Conteúdo à esquerda */
+    .hero-content {
+        grid-column: 1;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Imagem/vídeo à direita */
+    .hero-media {
+        grid-column: 2;
+        grid-row: 1 / -1; /* ocupa todas as linhas */
+        max-width: 100%;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    /* Botões lado a lado */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
 
 /* Desktops 900px+ */
-@media (min-width: 56.25em) {
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        gap: 3rem;
+        padding: 1rem 2rem;
+        margin-top: 0;
+    }
+
+    .hero-media {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
+
     .hero-content p {
         font-size: 1.125rem;
     }
 }
 
 /* Monitores grandes 1200px+ */
-@media (min-width: 75em) {
+@media (min-width: 1200px) {
     .hero {
         padding: 3rem 2rem;
+        margin-top: 0;
     }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
     .hero-content p {
         font-size: 1.25rem;
     }

@@ -26,7 +26,7 @@ body {
 }
 
 main {
-    background-color: var(--color-dark-teal);
+    background-color: var(--color-bg);
     padding-top: 4.5rem;
 }
 
@@ -168,27 +168,6 @@ footer {
     padding: var(--spacing-md) 0;
     background: var(--color-dark-teal);
     color: #fff;
-}
-
-.custom-shape-divider-top-1757015471 {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1757015471 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1757015471 .shape-fill {
-    fill: #E5E1DD;
 }
 
 /* =========================
