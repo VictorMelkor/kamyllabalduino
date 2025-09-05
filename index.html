@@ -74,52 +74,53 @@
     <main>
         <!-- Hero -->
         <section id="hero" class="hero container flex flex-center flex-column">
-    
-    <!-- Foto / vídeo da psicóloga no topo -->
-    <div class="hero-media mb-md">
-        <img src="assets/images/hero.svg" alt="Kamylla Balduíno" class="hero-photo">
-        <!-- Lightbox/overlay escondido -->
-        <div class="video-overlay">
-            <div class="video-wrapper">
-                <button class="close-video" aria-label="Fechar vídeo">&times;</button>
-                <video controls autoplay>
-                    <source src="assets/videos/hero_video.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
+
+            <!-- Foto / vídeo da psicóloga no topo -->
+            <div class="hero-media mb-md">
+                <img src="assets/images/hero.svg" alt="Kamylla Balduíno" class="hero-photo">
+                <!-- Lightbox/overlay escondido -->
+                <div class="video-overlay">
+                    <div class="video-wrapper">
+                        <button class="close-video" aria-label="Fechar vídeo">&times;</button>
+                        <video controls autoplay>
+                            <source src="assets/videos/hero_video.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo.
+                        </video>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Conteúdo: título, textos e botões -->
-    <div class="hero-content flex flex-column flex-center">
-        <h1>Quando você entende o que sente, escolhe melhor o que faz</h1>
+            <!-- Conteúdo: título, textos e botões -->
+            <div class="hero-content flex flex-column flex-center">
+                <h1>Quando você entende o que sente, escolhe melhor o que faz</h1>
 
-        <p>
-            Aqui, você encontra um <strong>espaço seguro</strong>, <strong>ético e acolhedor</strong> 
-            para olhar para si com <strong>profundidade</strong>.
-        </p>
-        <p>
-            Atendo <strong>adultos</strong> e <strong>casais</strong> que desejam viver 
-            com mais autenticidade, saúde emocional e qualidade nas relações.
-        </p>
-        <p>
-            Trabalho com base em psicologia baseada em <strong>evidências</strong>, com 
-            <strong>escuta ativa</strong>, <strong>sensibilidade</strong> e 
-            <strong>compromisso</strong> com sua jornada.
-        </p>
+                <p>
+                    Aqui, você encontra um <strong>espaço seguro</strong>, <strong>ético e acolhedor</strong>
+                    para olhar para si com <strong>profundidade</strong>.
+                </p>
+                <p>
+                    Atendo <strong>adultos</strong> e <strong>casais</strong> que desejam viver
+                    com mais autenticidade, saúde emocional e qualidade nas relações.
+                </p>
+                <p>
+                    Trabalho com base em psicologia baseada em <strong>evidências</strong>, com
+                    <strong>escuta ativa</strong>, <strong>sensibilidade</strong> e
+                    <strong>compromisso</strong> com sua jornada.
+                </p>
 
-        <div class="hero-buttons flex flex-wrap gap-sm mt-md">
-            <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">Fale Comigo</a>
-            <a href="#sobre" class="cta-sobre button">Me conheça melhor</a>
-        </div>
-    </div>
+                <div class="hero-buttons flex flex-wrap gap-sm mt-md">
+                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">Fale Comigo</a>
+                    <a href="#sobre" class="cta-sobre button">Me conheça melhor</a>
+                </div>
+            </div>
 
-</section>
+        </section>
 
 
 
         <!-- Serviços -->
         <section id="servicos">
+            <!-- Shape divider -->
             <div class="custom-shape-divider-top-1757088877">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
@@ -136,39 +137,78 @@
             </div>
 
             <div class="container mt-lg mb-lg">
+                <!-- Título e descrição -->
+                <h2 class="servicos-categoria">SERVIÇOS</h2>
+                <h2 class="servicos-titulo">Terapia Comportamental</h2>
+                <p class="servicos-descricao">
+                    Descubra como pequenas mudanças nos seus hábitos e pensamentos podem trazer mais equilíbrio e
+                    bem-estar para sua vida.
+                </p>
+
+                <!-- Grid de conteúdo -->
                 <div class="servicos-grid">
-                    <!-- Coluna 1, linha 1: título -->
-                    <h2 class="servicos-titulo">Serviços</h2>
+                    <!-- Conteúdo e cards -->
+                    <div class="servicos-conteudo">
+                        <article class="card card-detalhes">
+                            <h3>Você pode desenvolver:</h3>
+                            <ul class="services-list">
+                                <li>Autonomia emocional</li>
+                                <li>Clareza sobre padrões e repetições</li>
+                                <li>Melhor qualidade de vida</li>
+                                <li>Conexão mais profunda com seus valores</li>
+                            </ul>
+                        </article>
 
-                    <!-- Coluna 1, linha 2: descrição -->
-                    <p class="servicos-descricao">
-                        Oferecemos atendimento personalizado e materiais de apoio para auxiliar no seu
-                        desenvolvimento emocional e pessoal.
-                    </p>
+                        <article class="card card-grande collapsible-card">
+                            <!-- Título do card -->
+                            <h3>Indicado para você que:</h3>
 
-                    <!-- Coluna 1, linha 3: card de detalhes -->
-                    <article class="card card-detalhes">
-                        <h3>Terapia Individual</h3>
-                        <p>Atendimento presencial e online, voltado para autoconhecimento e superação de desafios.
-                        </p>
-                    </article>
+                            <!-- Preview da lista: 2 itens visíveis + 1 parcialmente transparente -->
+                            <ul class="services-preview">
+                                <li>Está se sentindo ansiosa, desmotivada ou sobrecarregada</li>
+                                <li>Vive em ciclos de autosabotagem ou repete padrões que trazem sofrimento</li>
+                            </ul>
 
-                    <!-- Coluna 2, linhas 1 a 3: imagem -->
-                    <div class="servicos-imagem">
-                        <img src="assets/images/02.jpg" alt="Imagem ilustrativa dos serviços">
+                            <!-- Lista completa escondida inicialmente -->
+                            <ul class="services-hidden">
+                                <li>Tem dificuldades nos relacionamentos (amorosos, familiares, sociais)</li>
+                                <li>Está passando por momentos de transição ou decisões importantes</li>
+                                <li>Deseja desenvolver autoestima e autocompaixão</li>
+                                <li>Sente dificuldade para lidar com frustrações, críticas ou rejeição</li>
+                                <li>Está em busca de mais clareza, autonomia emocional e propósito</li>
+                                <li>Sofre com culpa, vergonha, insegurança ou medo de ser quem é</li>
+                                <li>Quer se conhecer com profundidade e mudar com consistência</li>
+                                <li>Vive com Transtornos de Personalidade ou suspeita que possa ter</li>
+                            </ul>
+
+                            <!-- Botão para expandir/colapsar -->
+                            <button class="collapsible-toggle" aria-expanded="false">
+                                <span class="arrow"> ver mais ▼</span>
+                            </button>
+                        </article>
                     </div>
 
-                    <!-- Coluna 1 e 2, linha 4: card grande -->
-                    <article class="card card-grande">
-                        <h3>Extras & Benefícios</h3>
-                        <p>Inclui acompanhamento contínuo, recursos digitais exclusivos e suporte dedicado para
-                            maximizar seus resultados.</p>
-                    </article>
+                    <!-- Imagem e botão à direita -->
+                    <div class="servicos-direita">
+                        <div class="servicos-imagem">
+                            <picture>
+                                <!-- Para desktop -->
+                                <source srcset="assets/images/services-desktop.jpg" media="(min-width: 1200px)">
+                                <!-- Para mobile (fallback) -->
+                                <img src="assets/images/services-mobile.jpg" alt="Imagem ilustrativa dos serviços">
+                            </picture>
+                        </div>
+
+                        <div class="services-buttons flex flex-wrap gap-sm mt-md">
+                            <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">Fale
+                                Comigo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </section>
+
+
 
         <!-- Sobre mim -->
         <section id="sobre">

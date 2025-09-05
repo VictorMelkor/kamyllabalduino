@@ -129,8 +129,6 @@ button {
 }
 
 button:hover, button:focus {
-    background-color: var(--color-wine);
-    outline: 2px solid var(--color-dark-teal);
     outline-offset: 2px;
 }
 

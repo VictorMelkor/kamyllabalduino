@@ -198,4 +198,10 @@ header {
     border-radius: 0;
 }
 
+.menu a:hover {
+    border-bottom: 3px solid var(--color-terra-cotta);
+    color: var(--color-terra-cotta);
+    
+}
+
 }

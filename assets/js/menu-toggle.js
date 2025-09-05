@@ -62,3 +62,24 @@ function handleGesture() {
         }
     }
 }
+
+document.querySelectorAll('.collapsible-card').forEach(card => {
+    const toggle = card.querySelector('.collapsible-toggle');
+    const hiddenList = card.querySelector('.services-hidden');
+
+    toggle.addEventListener('click', () => {
+        card.classList.toggle('open');
+
+        if (card.classList.contains('open')) {
+            toggle.textContent = 'ver menos ▲';
+        } else {
+            toggle.textContent = 'ver mais ▼';
+        }
+
+        // Move o botão para o fim visualmente
+        card.appendChild(toggle);
+    });
+});
+
+
+
