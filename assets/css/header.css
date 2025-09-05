@@ -7,11 +7,12 @@ header {
     left: 0;
     width: 100vw;
     z-index: 1000;
-    background-color: rgba(229, 225, 221, 0.2); /* leve transparência */
+    background-color: var(--color-terra-cotta);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 /* =========================
    NAVBAR MOBILE-FIRST
@@ -20,13 +21,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 1rem;
+    padding: 0.3rem 1rem;
 }
 
 .navbar .logo {
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--color-dark-teal);
+}
+
+.menu-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-logo .logo {
+    font-size: 1.2rem;
+    display: inline-block;
+    color: var(--color-terra-cotta);
 }
 
 /* Menu base (mobile) */
@@ -36,14 +49,15 @@ header {
     right: -100%; /* fora da tela inicialmente */
     width: 80%; /* menu ocupa 80% da largura da tela */
     height: 100vh; /* altura total da tela */
-    background-color: rgba(229,225,221,0.95);
+    background-color: var(--color-dark-teal);
+    opacity: 98%;
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 1rem;
     transition: right 0.3s ease-in-out;
-    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    box-shadow: -4px 0 12px rgba(0,0,0,0.35);
 }
 
 /* Menu aberto */
@@ -51,28 +65,40 @@ header {
     right: 0; /* entra da direita */
 }
 
+.menu a {
+    font-size: 1.2rem;
+}
+
 .menu li a {
-    padding: 0.75rem 1rem;
-    border-radius: 4px;
-    color: var(--color-dark-teal);
+    padding: 0.5rem 1rem;
+    color: var(--color-bg);
     transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .menu li a:hover,
 .menu li a:focus {
-    background-color: var(--color-dark-teal);
-    color: var(--color-bg);
+    color: var(--color-dark-teal);
     outline: none;
+    
+}
+
+.menu a.active {
+    border-bottom: 3px solid var(--color-terra-cotta);
+    color: var(--color-terra-cotta);
+    font-weight: bold;
+    border-radius: 0;
 }
 
 /* Botão do menu */
 .menu-toggle {
     font-size: 1.5rem;
+    font-weight: bold;
     background: none;
     border: none;
     cursor: pointer;
     color: var(--color-dark-teal);
 }
+
 
 /* =========================
    MEDIA QUERIES - DESKTOPS
@@ -81,6 +107,10 @@ header {
 @media (min-width: 768px) {
     .menu {
         width: 40%;
+    }
+
+    .menu-toggle {
+        font-size: 2rem;
     }
 }
 
@@ -109,5 +139,24 @@ header {
     .menu-toggle {
         display: none;
     }
+
+    .menu-logo {
+        display: none;
+    }
+
+    .menu li {
+        padding: 0 0;
+    }
+
+    .menu a {
+    font-size: 0.8rem;
+}
+
+.menu a.active {
+    border-bottom: 3px solid var(--color-dark-teal);
+    color: var(--color-dark-teal);
+    font-weight: bold;
+    border-radius: 0;
+}
 
 }

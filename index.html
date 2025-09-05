@@ -33,53 +33,73 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar container flex flex-center">
-            <a href="#" class="logo">Kamylla Balduíno</a>
-            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-            <ul class="menu flex">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav class="navbar container flex flex-center">
+    <!-- Logo visível sempre -->
+    <a href="#" class="logo">Kamylla Balduíno</a>
+
+    <!-- Botão toggle -->
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <!-- Menu mobile -->
+    <ul class="menu flex">
+      <!-- Logo só aparece no mobile -->
+      <li class="menu-logo">
+        <a href="#" class="logo">Kamylla Balduíno</a>
+      </li>
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
 
     <main>
         <!-- Hero -->
         <section id="hero" class="hero container flex flex-center flex-column">
-            <div class="container hero-content mb-lg">
-                <h1>Quando você ENTENDE O QUE SENTE, escolhe melhor O QUE FAZ</h1>
-                <p>Aqui, você encontra um <strong>espaço seguro</strong>, <strong>ético e acolhedor</strong> para olhar
-                    para si com <strong>profundidade</strong>.</p>
-                <p>Atendo <strong>adultos</strong> e <strong>casais</strong> que desejam viver com mais autenticidade,
-                    saúde emocional e qualidade nas relações.</p>
-                <p>Trabalho com base em psicologia baseada em <strong>evidências</strong>, com <strong>escuta
-                        ativa</strong>, <strong>sensibilidade</strong> e <strong>compromisso</strong> com sua jornada.
-                </p>
-                <a href="https://wa.me/5585988209392" class="cta-whatsapp button">Fale Comigo</a>
-                <a href="https://wa.me/5585988209392" class="cta-whatsapp button">Me conheça melhor</a>
-            </div>
-            <div class="container hero-video">
-                <!-- Imagem de capa do vídeo -->
-                <img src="assets/images/02.jpg" alt="Apresentação" class="video-thumbnail">
+  <!-- Coluna 1: conteúdo -->
+  <div class="container hero-content mb-lg">
+    <h1>Quando você ENTENDE O QUE SENTE, escolhe melhor O QUE FAZ</h1>
 
-                <!-- Lightbox/overlay escondido -->
-                <div class="video-overlay">
-                    <div class="video-wrapper">
-                        <button class="close-video" aria-label="Fechar vídeo">&times;</button>
-                        <video controls autoplay>
-                            <source src="assets/videos/apresentacao.mp4" type="video/mp4">
-                            Seu navegador não suporta vídeo.
-                        </video>
-                    </div>
-                </div>
-            </div>
+    <p>
+      Aqui, você encontra um <strong>espaço seguro</strong>, <strong>ético e
+      acolhedor</strong> para olhar para si com <strong>profundidade</strong>.
+    </p>
+    <p>
+      Atendo <strong>adultos</strong> e <strong>casais</strong> que desejam viver
+      com mais autenticidade, saúde emocional e qualidade nas relações.
+    </p>
+    <p>
+      Trabalho com base em psicologia baseada em <strong>evidências</strong>, com
+      <strong>escuta ativa</strong>, <strong>sensibilidade</strong> e
+      <strong>compromisso</strong> com sua jornada.
+    </p>
 
+    <a href="https://wa.me/5585988209392" class="cta-whatsapp button">Fale Comigo</a>
+    <a href="#sobre" class="cta-sobre button">Me conheça melhor</a>
+  </div>
 
-        </section>
+  <!-- Coluna 2: vídeo -->
+  <div class="container hero-video">
+    <!-- Imagem de capa do vídeo -->
+    <img src="assets/images/02.jpg" alt="Apresentação" class="video-thumbnail">
+
+    <!-- Lightbox/overlay escondido -->
+    <div class="video-overlay">
+      <div class="video-wrapper">
+        <button class="close-video" aria-label="Fechar vídeo">&times;</button>
+        <video controls autoplay>
+          <source src="assets/videos/apresentacao.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- Serviços -->
         <section id="servicos">
@@ -196,6 +216,7 @@
 
     <script src="assets/js/menu-toggle.js"></script>
     <script src="assets/js/video.js"></script>
+    <script src="assets/js/scroll-spy.js"></script>
 </body>
 
 </html>

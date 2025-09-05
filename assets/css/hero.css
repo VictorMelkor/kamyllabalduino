@@ -3,36 +3,50 @@
 ========================= */
 .hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
     padding: 2rem 1rem;
     text-align: center;
-    background-color: rgba(229,225,221,0.3); /* leve overlay */
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .hero-content h1 {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--color-dark-teal);
+    color: var(--color-bg);
     margin-bottom: 1rem;
 }
 
 .hero-content p {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-dark-teal);
-    margin-bottom: 1.25rem;
+    color: var(--color-bg);
+    margin: 0 0 0.5rem 0;
+    text-align: left;
 }
 
 .cta-whatsapp.button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
+    margin: 1rem 0.5rem;
+    width: 100%;
     background-color: var(--color-terra-cotta);
     color: var(--color-bg);
-    border-radius: 6px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.cta-sobre.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem 0.5rem;
+    width: 100%;
+    border: 1px solid var(--color-terra-cotta);
+    color: var(--color-terra-cotta);
+    border-radius: 10px;
     font-weight: 600;
     transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
@@ -50,7 +64,7 @@
 .hero-video {
     width: 100%;
     max-width: 720px;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -59,8 +73,10 @@
 /* Imagem de capa clicável */
 .video-thumbnail {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     display: block;
+    margin-bottom: 1rem;
+    
 }
 
 /* Overlay do vídeo */
@@ -100,7 +116,7 @@
 .video-wrapper video {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
     display: block;
 }
 
@@ -109,21 +125,28 @@
 ========================= */
 
 /* Tablets 600px+ */
-@media (min-width: 37.5em) {
-    .hero {
-        flex-direction: row;
-        text-align: left;
-        justify-content: space-between;
-    }
-    .hero-content {
-        flex: 1;
-        padding-right: 1rem;
-    }
-    .hero-video {
-        flex: 1;
-        max-width: 50%;
-    }
+@media (min-width: 768px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+    align-items: center;
+    text-align: left;
+    column-gap: 2rem;
+  }
+
+  .hero-content {
+    grid-column: 1;
+  }
+
+  .hero-video {
+    grid-column: 2;
+    grid-row: 1 / -1; /* ocupa todas as linhas */
+    max-width: 100%;
+    align-self: end;
+  }
 }
+
+
 
 /* Desktops 900px+ */
 @media (min-width: 56.25em) {

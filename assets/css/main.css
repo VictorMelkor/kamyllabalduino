@@ -12,6 +12,7 @@
 html {
     font-size: 100%; /* 1rem = 16px padrão */
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -19,9 +20,14 @@ body {
     font-size: 1rem; /* 16px base, escalável */
     line-height: 1.6;
     color: #264444; /* cor principal */
-    background-color: #e5e1dd;
+    background-color: var(--color-dark-teal);
     overflow-x: hidden;
-    padding-top: var(--header-height); /* novo: empurra o conteúdo abaixo do header fixo */
+    
+}
+
+main {
+    background-color: var(--color-dark-teal);
+    padding-top: 4.5rem;
 }
 
 ul, ol {
