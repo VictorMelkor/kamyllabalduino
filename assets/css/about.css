@@ -1,24 +1,49 @@
 /* =========================
    SOBRE MIM
 ========================= */
+#sobre {
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../images/sobre-bg.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #333;
+}
+
+#sobre::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6); /* camada de contraste */
+    z-index: 1;
+}
+
+#sobre .container {
+    position: relative;
+    z-index: 2;
+}
+
 #sobre article {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
-    background-color: rgba(229,225,221,0.4); /* leve destaque */
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: auto;
 }
 
 #sobre h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--color-dark-teal);
 }
 
 #sobre p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 #sobre details summary {
