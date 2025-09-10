@@ -10,6 +10,17 @@
     padding-top: 6rem;
 }
 
+#servicos2 {
+    position: relative;
+    background-color: var(--color-wine);
+    color: var(--color-bg);
+    width: 100%;
+    padding: 4rem 1rem 6rem;
+    padding-top: 10rem;
+}
+
+
+
 .servicos-categoria {
     font-size: 0.8rem;
     margin: 3rem 0 1rem 0;
@@ -55,17 +66,31 @@
     gap: 1rem;
 }
 
+.servicos-direita img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 20px;
+    object-fit: cover; /* mantém proporção e corta excesso */
+}
+
 /* Mobile: botão antes da imagem */
-.services-buttons {
-    order: -1; /* botão sobe acima da imagem */
+.services-buttons,
+.services-buttons2 {
+    order: -1;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/* Imagem mantém order padrão (0) */
-.servicos-imagem {
-    order: 0;
+.services-buttons .cta-whatsapp {
+    background-color: var(--color-terra-cotta);
+
+}
+
+.services-buttons2 .cta-whatsapp {
+    background-color: var(--color-dark-teal);
+
 }
 
 /* Cards */
@@ -126,9 +151,6 @@
     border-radius: 10%;
 }
 
-.servicos-imagem {
-    order: 0;
-}
 /* =========================
    CARD COLAPSÁVEL MOBILE
 ========================= */
@@ -203,63 +225,52 @@
     transform: rotate(180deg);
 }
 
-/* =========================
-   BOTOES MOBILE
-========================= */
-.services-buttons .cta-whatsapp {
-    background-color: var(--color-terra-cotta);
-    margin-bottom: 1rem;
+.custom-shape-divider-top-1757465801 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-    .services-buttons {
-    order: -1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    }
+.custom-shape-divider-top-1757465801 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 214px;
+}
+
+.custom-shape-divider-top-1757465801 .shape-fill {
+    fill: var(--color-dark-teal);
+}
 
 /* =========================
    MEDIA QUERIES
 ========================= */
 
-/* Tablets e acima 768px+ */
+/* Tablets 768px+ */
 @media (min-width: 768px) {
     .servicos-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* coluna esquerda: conteúdo, coluna direita: imagem + botão */
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
-        align-items: start;
-    }
-
-    .servicos-conteudo {
-        grid-column: 1;
-    }
-
-    /* Coluna direita: imagem + botão */
-    .servicos-direita {
-        grid-column: 2;
-        display: flex;
-        flex-direction: column; /* imagem acima do botão */
-        align-items: flex-end;
-        gap: 1rem;
+        align-items: center;
     }
 
     .servicos-direita img {
-        width: 100%;
         max-width: 400px;
-        border-radius: 20px;
     }
 
-    /* Botão centralizado abaixo da imagem */
     .services-buttons {
         justify-content: center;
         margin-top: 1.5rem;
         order: 1;
     }
 
-    .servicos-imagem {
-        order: 0;
-        max-width: 400px;
+    .services-buttons .cta-whatsapp,
+    .services-buttons2 .cta-whatsapp {
+        width: 90%;
     }
 }
 
@@ -277,14 +288,8 @@
         font-size: 1.125rem;
     }
 
-    .servicos-direita {
-        justify-content: center;
-    }
-
     .servicos-direita img {
-        width: 70%;
         max-width: 500px;
-        margin: auto auto;
     }
 }
 
@@ -299,6 +304,12 @@
     }
 
     .servicos-direita img {
+        width: 100%;
         max-width: 500px;
+    }
+
+    .services-buttons .cta-whatsapp,
+    .services-buttons2 .cta-whatsapp {
+        width: 50%;
     }
 }
