@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="assets/css/faq.css">
     <link rel="stylesheet" href="assets/css/contact.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -55,20 +58,6 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <div class="custom-shape-divider-top-1757090232">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
-                <path
-                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                    opacity=".25" class="shape-fill"></path>
-                <path
-                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                    opacity=".5" class="shape-fill"></path>
-                <path
-                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                    class="shape-fill"></path>
-            </svg>
-        </div>
     </header>
 
 
@@ -110,7 +99,9 @@
                 </p>
 
                 <div class="hero-buttons flex flex-wrap gap-sm mt-md">
-                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">Fale Comigo</a>
+                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Fale Comigo
+                    </a>
                     <a href="#sobre" class="cta-sobre button">Me conheça melhor</a>
                 </div>
             </div>
@@ -118,99 +109,100 @@
         </section>
 
 <section id="como-funciona">
-    <!-- Título e descrição -->
-    <div class="cf-header">
-        <h2 class="cf-categoria">COMO FUNCIONA</h2>
-        <h2 class="cf-titulo">Seu Caminho na Terapia</h2>
-        <p class="cf-descricao">
-            Descubra de forma clara cada etapa de uma sessão de terapia ou acompanhamento psicológico.
-        </p>
+
+    <div class="container flex flex-column flex-center">
+
+        <!-- Título e descrição -->
+        <div class="cf-header text-center">
+            <h2 class="cf-categoria">COMO FUNCIONA</h2>
+            <h2 class="cf-titulo">Seu Caminho na Terapia</h2>
+            <p class="cf-descricao">
+                Descubra de forma clara cada etapa de uma sessão de terapia ou acompanhamento psicológico.
+            </p>
+        </div>
+
+        <!-- Grid de cards -->
+        <div class="cf-grid">
+            <!-- Card 1: Agendamento -->
+            <article class="cf-card">
+                <span class="cf-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 18H5V9h14v13z" />
+                    </svg>
+                </span>
+                <h3 class="cf-card-title">Agendamento</h3>
+                <p class="cf-card-content">
+                    Escolha o horário que melhor se adapta à sua rotina, de forma prática via WhatsApp ou agenda
+                    online.
+                </p>
+            </article>
+
+            <!-- Card 2: Primeira Sessão -->
+            <article class="cf-card">
+                <span class="cf-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z" />
+                    </svg>
+                </span>
+                <h3 class="cf-card-title">Primeira Sessão</h3>
+                <p class="cf-card-content">
+                    Nesta sessão inicial, conhecemos seus objetivos e definimos o plano de acompanhamento mais
+                    adequado.
+                </p>
+            </article>
+
+            <!-- Card 3: Sessões Regulares -->
+            <article class="cf-card">
+                <span class="cf-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b"
+                        viewBox="0 0 24 24">
+                        <path d="M3 17h2v-7H3v7zm4 0h2V7H7v10zm4 0h2v-4h-2v4zm4 0h2v-10h-2v10zm4 0h2v-2h-2v2z" />
+                    </svg>
+                </span>
+                <h3 class="cf-card-title">Sessões Regulares</h3>
+                <p class="cf-card-content">
+                    Sessões semanais ou conforme combinado, com estratégias práticas e reflexão sobre seus padrões.
+                </p>
+            </article>
+
+            <!-- Card 4: Acompanhamento -->
+            <article class="cf-card">
+                <span class="cf-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M9 21h6v-1H9v1zm-1.6-2h9.2l-.2-1H7.4l-.2 1zM12 2C8.13 2 5 5.13 5 9c0 2.25 1.09 4.26 2.78 5.5L8 16h8l.22-1.5C17.91 13.26 19 11.25 19 9c0-3.87-3.13-7-7-7z" />
+                    </svg>
+                </span>
+                <h3 class="cf-card-title">Acompanhamento</h3>
+                <p class="cf-card-content">
+                    Revisamos progressos, ajustamos estratégias e fortalecemos habilidades emocionais e
+                    comportamentais.
+                </p>
+            </article>
+        </div>
+
+        <!-- Botão de contato -->
+        <div class="cf-buttons">
+            <a href="https://wa.me/5585988209392" class="cf-button button" target="_blank">
+                <i class="fab fa-whatsapp"></i> Fale Comigo
+            </a>
+        </div>
+
     </div>
 
-    <!-- Grid de cards -->
-    <div class="cf-grid">
-        <!-- Card 1: Agendamento -->
-        <article class="cf-card">
-            <span class="cf-card-icon">
-                <!-- Calendário -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b" viewBox="0 0 24 24">
-                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 18H5V9h14v13z"/>
-                </svg>
-            </span>
-            <h3 class="cf-card-title">Agendamento</h3>
-            <p class="cf-card-content">
-                Escolha o horário que melhor se adapta à sua rotina, de forma prática via WhatsApp ou agenda online.
-            </p>
-        </article>
-
-        <!-- Card 2: Primeira Sessão -->
-        <article class="cf-card">
-            <span class="cf-card-icon">
-                <!-- Saudação/Check -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/>
-                </svg>
-            </span>
-            <h3 class="cf-card-title">Primeira Sessão</h3>
-            <p class="cf-card-content">
-                Nesta sessão inicial, conhecemos seus objetivos e definimos o plano de acompanhamento mais adequado.
-            </p>
-        </article>
-
-        <!-- Card 3: Sessões Regulares -->
-        <article class="cf-card">
-            <span class="cf-card-icon">
-                <!-- Gráfico/Progressão -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b" viewBox="0 0 24 24">
-                    <path d="M3 17h2v-7H3v7zm4 0h2V7H7v10zm4 0h2v-4h-2v4zm4 0h2v-10h-2v10zm4 0h2v-2h-2v2z"/>
-                </svg>
-            </span>
-            <h3 class="cf-card-title">Sessões Regulares</h3>
-            <p class="cf-card-content">
-                Sessões semanais ou conforme combinado, com estratégias práticas e reflexão sobre seus padrões.
-            </p>
-        </article>
-
-        <!-- Card 4: Acompanhamento -->
-        <article class="cf-card">
-            <span class="cf-card-icon">
-                <!-- Luz/Ideia -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00796b" viewBox="0 0 24 24">
-                    <path d="M9 21h6v-1H9v1zm-1.6-2h9.2l-.2-1H7.4l-.2 1zM12 2C8.13 2 5 5.13 5 9c0 2.25 1.09 4.26 2.78 5.5L8 16h8l.22-1.5C17.91 13.26 19 11.25 19 9c0-3.87-3.13-7-7-7z"/>
-                </svg>
-            </span>
-            <h3 class="cf-card-title">Acompanhamento</h3>
-            <p class="cf-card-content">
-                Revisamos progressos, ajustamos estratégias e fortalecemos habilidades emocionais e comportamentais.
-            </p>
-        </article>
-    </div>
-
-    <!-- Botão de contato -->
-    <div class="cf-buttons">
-        <a href="https://wa.me/5585988209392" class="cf-button" target="_blank">Fale Comigo</a>
-    </div>
 </section>
+
+
 
 
 
         <!-- Serviços -->
         <section id="servicos">
-            <!-- Shape divider -->
-            <div class="custom-shape-divider-top-1757088877">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        opacity=".25" class="shape-fill"></path>
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                        opacity=".5" class="shape-fill"></path>
-                    <path
-                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
 
             <div class="container mt-lg mb-lg">
                 <!-- Título e descrição -->
@@ -269,28 +261,14 @@
                 </div>
 
                 <div class="services-buttons flex flex-wrap gap-sm mt-md">
-                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">Fale
+                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank"><i
+                            class="fab fa-whatsapp"></i> Fale
                         Comigo</a>
                 </div>
             </div>
         </section>
 
         <section id="servicos2">
-            <!-- Shape divider -->
-            <div class="custom-shape-divider-top-1757465801">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        opacity=".25" class="shape-fill"></path>
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                        opacity=".5" class="shape-fill"></path>
-                    <path
-                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
 
             <div class="container mt-lg mb-lg">
                 <!-- Título e descrição -->
@@ -352,7 +330,8 @@
                 </div>
 
                 <div class="services-buttons2 flex flex-wrap gap-sm mt-md">
-                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">Fale
+                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank"><i
+                            class="fab fa-whatsapp"></i> Fale
                         Comigo</a>
                 </div>
             </div>
@@ -362,24 +341,30 @@
 
 
         <!-- Sobre mim -->
-<section id="sobre">
-    <div class="container mt-lg mb-lg">
-        <article>
-            <h2>Sobre mim</h2>
-            <p>Sou <strong>Kamylla Balduíno</strong>, psicóloga clínica comprometida em oferecer um atendimento humano,
-                ético e transformador, ajudando cada pessoa a construir sua própria trajetória de crescimento e equilíbrio emocional.</p>
-            <details>
-                <summary>Ler mais</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, sem sit amet feugiat
-                    fermentum, nulla felis viverra dui, ac aliquam neque purus in nunc. Aenean sed metus in magna
-                    vulputate fermentum. Suspendisse dignissim, urna vel elementum tempus, metus nisl dapibus eros, vel
-                    lacinia justo ipsum sit amet erat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et sapien ut nulla varius interdum.
-                    Fusce vehicula dui ac nunc egestas, sed faucibus ligula facilisis.</p>
-            </details>
-        </article>
-    </div>
-</section>
+        <section id="sobre">
+            <div class="container mt-lg mb-lg">
+                <article>
+                    <h2>Sobre mim</h2>
+                    <p>Sou <strong>Kamylla Balduíno</strong>, psicóloga clínica comprometida em oferecer um atendimento
+                        humano,
+                        ético e transformador, ajudando cada pessoa a construir sua própria trajetória de crescimento e
+                        equilíbrio emocional.</p>
+                    <details>
+                        <summary>Ler mais</summary>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, sem sit amet
+                            feugiat
+                            fermentum, nulla felis viverra dui, ac aliquam neque purus in nunc. Aenean sed metus in
+                            magna
+                            vulputate fermentum. Suspendisse dignissim, urna vel elementum tempus, metus nisl dapibus
+                            eros, vel
+                            lacinia justo ipsum sit amet erat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et sapien ut nulla varius
+                            interdum.
+                            Fusce vehicula dui ac nunc egestas, sed faucibus ligula facilisis.</p>
+                    </details>
+                </article>
+            </div>
+        </section>
 
 
         <!-- FAQ -->

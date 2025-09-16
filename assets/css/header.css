@@ -10,7 +10,7 @@ header {
     background-color: var(--color-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 1px 30px rgba(0,0,0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.116);
 }
 
 
