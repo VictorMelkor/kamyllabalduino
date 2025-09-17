@@ -16,13 +16,12 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Literata', serif;
     font-size: 1rem; /* 16px base, escalável */
     line-height: 1.6;
     color: #264444; /* cor principal */
     background-color: var(--color-dark-teal);
     overflow-x: hidden;
-    
 }
 
 main {
@@ -72,7 +71,8 @@ table {
     --color-bg: #e5e1dd;
 
     /* TIPOGRAFIA */
-    --font-primary: 'Montserrat', sans-serif;
+    --font-primary: 'Montserrat', sans-serif; /* para títulos */
+    --font-text: 'Literata', serif; /* para textos */
 
     /* ESPAÇAMENTOS */
     --spacing-xs: 0.25rem;
@@ -90,7 +90,7 @@ table {
    ESTILO BASE
 ========================= */
 body {
-    font-family: var(--font-primary);
+    font-family: var(--font-text);
     font-size: 1rem;
     line-height: 1.6;
     color: var(--color-dark-teal);
@@ -98,10 +98,15 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
     font-weight: 600;
     color: var(--color-dark-teal);
     line-height: 1.2;
     margin-bottom: var(--spacing-md);
+}
+
+p, li, span, a, button, input, textarea, select {
+    font-family: var(--font-text);
 }
 
 p {
@@ -145,7 +150,6 @@ input:focus, textarea:focus, select:focus {
     border-color: var(--color-terra-cotta);
     outline: 2px solid var(--color-dark-teal);
 }
-
 
 /* =========================
    SEÇÕES DE PÁGINA

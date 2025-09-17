@@ -4,6 +4,7 @@
 
 /* Seção (ID já no HTML: #como-funciona) */
 #como-funciona {
+    position: relative;
     padding: var(--spacing-xl) var(--spacing-md);
     background-color: var(--color-dark-teal);
     color: var(--color-bg);
@@ -15,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-lg);
+    margin: 5rem auto 2rem auto;
 }
 
 /* Imagem */
@@ -63,13 +65,45 @@
     background-color: var(--color-terra-cotta);
     color: var(--color-bg);
     transition: background-color var(--transition-fast), transform var(--transition-fast);
+    width: 100%;
+    text-align: center;
 }
 
 .cf-button:hover,
 .cf-button:focus {
-    background-color: var(--color-light-teal);
+    background-color: var(--color-bg);
     color: var(--color-dark-teal);
     transform: translateY(-4px);
+}
+
+
+.custom-shape-divider-top-1758130046 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1758130046 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1758130046 .shape-fill {
+    fill: var(--color-bg);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1758130046 svg {
+        width: calc(100% + 1.3px);
+        height: 32px;
+    }
 }
 
 /* =========================

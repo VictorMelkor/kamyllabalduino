@@ -10,8 +10,9 @@
     <meta name="description"
         content="Psicóloga clínica em Goiânia. Tratamento focado nos objetivos do paciente, com metas definidas em conjunto. Atendimento individual, online e presencial.">
     <meta name="keywords" content="psicóloga, psicologia clínica, terapia, saúde mental, Goiânia, atendimento online">
+    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social Sharing -->
     <meta property="og:title" content="Kamylla Balduíno | Psicóloga Clínica">
     <meta property="og:description"
         content="Tratamento focado em metas e objetivos definidos em conjunto. Psicoterapia online e presencial.">
@@ -19,25 +20,43 @@
     <meta property="og:url" content="https://seudominio.com">
     <meta property="og:image" content="https://seudominio.com/imagens/preview.jpg">
 
+    <!-- Preconnect / Preload para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/hero.css">
     <link rel="stylesheet" href="assets/css/beneficios.css">
+    <link rel="stylesheet" href="assets/css/como-funciona.css">
+    <link rel="stylesheet" href="assets/css/abordagem.css">
     <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="assets/css/guide.css">
-    <link rel="stylesheet" href="assets/css/services.css">
     <link rel="stylesheet" href="assets/css/faq.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-K5i6YNc..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Google Ads / Analytics (Exemplo, carregamento assíncrono) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXX-X');
+    </script> -->
 </head>
+
+
 
 <body>
     <header>
@@ -68,19 +87,9 @@
         <!-- Hero -->
         <section id="hero" class="hero container flex flex-center flex-column">
 
-            <!-- Foto / vídeo da psicóloga no topo -->
+            <!-- Foto da psicóloga -->
             <div class="hero-media mb-md">
-                <img src="assets/images/hero.svg" alt="Kamylla Balduíno" class="hero-photo">
-                <!-- Lightbox/overlay escondido -->
-                <div class="video-overlay">
-                    <div class="video-wrapper">
-                        <button class="close-video" aria-label="Fechar vídeo">&times;</button>
-                        <video controls autoplay>
-                            <source src="assets/videos/hero_video.mp4" type="video/mp4">
-                            Seu navegador não suporta vídeo.
-                        </video>
-                    </div>
-                </div>
+                <img src="assets/images/02.jpg" alt="Kamylla Balduíno" class="hero-photo">
             </div>
 
             <!-- Conteúdo: título, textos e botões -->
@@ -105,11 +114,25 @@
                     <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">
                         <i class="fab fa-whatsapp"></i> Fale Comigo
                     </a>
-                    <a href="#sobre" class="cta-sobre button">Me conheça melhor</a>
+                    <button id="play-video-btn" class="cta-sobre button">
+                        <i class="fas fa-play"></i> Me conheça melhor
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lightbox do vídeo -->
+            <div id="video-lightbox" class="video-overlay" style="display:none;">
+                <div class="video-wrapper">
+                    <button class="close-video" aria-label="Fechar vídeo">&times;</button>
+                    <video controls>
+                        <source src="assets/videos/hero_video.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
                 </div>
             </div>
 
         </section>
+
 
 
         <section id="beneficios">
@@ -188,6 +211,20 @@
 
 
         <section id="como-funciona">
+            <div class="custom-shape-divider-top-1758130046">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                        opacity=".25" class="shape-fill"></path>
+                    <path
+                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                        opacity=".5" class="shape-fill"></path>
+                    <path
+                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
             <div class="container cf-wrapper">
 
                 <!-- Imagem -->
@@ -220,235 +257,302 @@
         </section>
 
         <section id="abordagem">
-    <div class="ab-container flex flex-column flex-center">
 
-        <!-- Texto da abordagem -->
-        <div class="ab-header text-left">
-            <p class="ab-categoria">Abordagem</p>
-            <h2 class="ab-titulo">Terapia Cognitivo-Comportamental</h2>
-            <p class="ab-descricao">
-                Minha prática é baseada na Terapia Cognitivo-Comportamental (TCC), uma abordagem
-                focada em compreender como pensamentos, emoções e comportamentos se relacionam.
-                O objetivo é ajudar você a lidar melhor com desafios atuais, construindo estratégias
-                práticas e eficazes para alcançar mudanças reais.
-            </p>
-        </div>
+            <div class="ab-container flex flex-column flex-center">
 
-        <!-- Checklist de pontos da abordagem -->
-        <ul class="ab-checklist">
-    <li>
-        <span class="ab-icon">
-            <!-- SVG leve representando "Foco no Presente" -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
-                <path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1zm1 17h-2v-6h2zm0-8h-2V7h2z"/>
-            </svg>
-        </span>
-        Foco no Presente: Priorizamos questões atuais, trabalhando em soluções práticas.
-    </li>
-    <li>
-        <span class="ab-icon">
-            <!-- SVG leve representando "Estratégias Práticas" -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
-                <path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/>
-            </svg>
-        </span>
-        Estratégias Práticas: Ferramentas e exercícios aplicáveis no dia a dia.
-    </li>
-    <li>
-        <span class="ab-icon">
-            <!-- SVG leve representando "Metas Definidas" -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v6c0 5 5 9 10 9s10-4 10-9V7l-10-5z"/>
-            </svg>
-        </span>
-        Metas Definidas: Objetivos claros, acompanhados em conjunto.
-    </li>
-    <li>
-        <span class="ab-icon">
-            <!-- SVG leve representando "Base Científica" -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
-                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-2h2zm0-4h-2V7h2v6z"/>
-            </svg>
-        </span>
-        Base Científica: Abordagem validada por pesquisas, com resultados comprovados.
-    </li>
-</ul>
-
-
-    </div>
-</section>
-
-
-<section id="sobre">
-    <div class="sobre-wrapper flex flex-column flex-center">
-
-        <!-- Conteúdo textual -->
-        <div class="sobre-content">
-            <p class="sobre-categoria">Sobre Mim</p>
-            <h2 class="sobre-titulo">Kamylla Balduíno</h2>
-            <p class="sobre-texto">
-                Sou psicóloga dedicada ao crescimento profissional e pessoal dos meus pacientes. 
-                Acredito que cada desafio pode ser transformado em oportunidade de evolução, e meu 
-                objetivo é criar um ambiente seguro e acolhedor, onde você possa explorar seu 
-                potencial e conquistar resultados reais. Meu trabalho combina empatia com estratégias 
-                comprovadas, focadas em seu desenvolvimento contínuo.
-            </p>
-            <p class="sobre-texto">
-                Juntos, vamos estabelecer metas claras e trabalhar de forma prática para alcançá-las, 
-                respeitando seu ritmo e sua individualidade.
-            </p>
-        </div>
-
-        <!-- Foto -->
-        <div class="sobre-image">
-            <img src="assets/images/02.jpg" alt="Kamylla Balduíno">
-        </div>
-
-    </div>
-</section>
-
-
-<section id="faq">
-    <div class="faq-wrapper">
-        <p class="faq-categoria">Perguntas Frequentes</p>
-        <h2 class="faq-titulo">Dúvidas Comuns</h2>
-
-        <div class="faq-accordion">
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    Como funciona o primeiro atendimento?
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        No primeiro encontro, vamos conversar sobre sua história, suas necessidades e o que você espera da terapia. 
-                        É um espaço inicial para entender suas demandas e definir, juntos, o melhor caminho de trabalho.
+                <!-- Texto da abordagem -->
+                <div class="ab-header text-left">
+                    <p class="ab-categoria">Abordagem</p>
+                    <h2 class="ab-titulo">Terapia Cognitivo-Comportamental</h2>
+                    <p class="ab-descricao">
+                        Minha prática é baseada na Terapia Cognitivo-Comportamental (TCC), uma abordagem
+                        focada em compreender como pensamentos, emoções e comportamentos se relacionam.
+                        O objetivo é ajudar você a lidar melhor com desafios atuais, construindo estratégias
+                        práticas e eficazes para alcançar mudanças reais.
                     </p>
                 </div>
+
+                <!-- Checklist de pontos da abordagem -->
+                <ul class="ab-checklist">
+                    <li>
+                        <span class="ab-icon">
+                            <!-- SVG leve representando "Foco no Presente" -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
+                                <path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1zm1 17h-2v-6h2zm0-8h-2V7h2z" />
+                            </svg>
+                        </span>
+                        Foco no Presente: Priorizamos questões atuais, trabalhando em soluções práticas.
+                    </li>
+                    <li>
+                        <span class="ab-icon">
+                            <!-- SVG leve representando "Estratégias Práticas" -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
+                                <path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z" />
+                            </svg>
+                        </span>
+                        Estratégias Práticas: Ferramentas e exercícios aplicáveis no dia a dia.
+                    </li>
+                    <li>
+                        <span class="ab-icon">
+                            <!-- SVG leve representando "Metas Definidas" -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7v6c0 5 5 9 10 9s10-4 10-9V7l-10-5z" />
+                            </svg>
+                        </span>
+                        Metas Definidas: Objetivos claros, acompanhados em conjunto.
+                    </li>
+                    <li>
+                        <span class="ab-icon">
+                            <!-- SVG leve representando "Base Científica" -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="var(--color-terra-cotta)" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-2h2zm0-4h-2V7h2v6z" />
+                            </svg>
+                        </span>
+                        Base Científica: Abordagem validada por pesquisas, com resultados comprovados.
+                    </li>
+                </ul>
+
+
             </div>
 
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    A terapia online funciona de verdade?
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Sim. A terapia online é tão eficaz quanto a presencial, desde que realizada em um ambiente reservado e 
-                        com boa conexão. Muitas pessoas preferem essa modalidade pela praticidade e conforto.
+            <div class="custom-shape-divider-bottom-1758130681">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+
+        <section id="sobre">
+            <div class="sobre-wrapper flex flex-column flex-center">
+
+                <!-- Conteúdo textual -->
+                <div class="sobre-content">
+                    <p class="sobre-categoria">Sobre Mim</p>
+                    <h2 class="sobre-titulo">Kamylla Balduíno</h2>
+                    <p class="sobre-texto">
+                        Sou psicóloga dedicada ao crescimento profissional e pessoal dos meus pacientes.
+                        Acredito que cada desafio pode ser transformado em oportunidade de evolução, e meu
+                        objetivo é criar um ambiente seguro e acolhedor, onde você possa explorar seu
+                        potencial e conquistar resultados reais. Meu trabalho combina empatia com estratégias
+                        comprovadas, focadas em seu desenvolvimento contínuo.
+                    </p>
+                    <p class="sobre-texto">
+                        Juntos, vamos estabelecer metas claras e trabalhar de forma prática para alcançá-las,
+                        respeitando seu ritmo e sua individualidade.
                     </p>
                 </div>
+
+                <!-- Foto -->
+                <div class="sobre-image">
+                    <img src="assets/images/02.jpg" alt="Kamylla Balduíno">
+                </div>
+
             </div>
 
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    Como posso agendar uma sessão?
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        O agendamento pode ser feito diretamente pelo formulário de contato ou através do WhatsApp. 
-                        Após a solicitação, você receberá todas as informações para confirmar sua sessão.
-                    </p>
+
+        </section>
+
+
+        <section id="faq">
+            <div class="custom-shape-divider-top-1758130850">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="faq-wrapper">
+                <p class="faq-categoria">Perguntas Frequentes</p>
+                <h2 class="faq-titulo">Dúvidas Comuns</h2>
+
+                <div class="faq-accordion">
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Como funciona o primeiro atendimento?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                No primeiro encontro, vamos conversar sobre sua história, suas necessidades e o que você
+                                espera da terapia.
+                                É um espaço inicial para entender suas demandas e definir, juntos, o melhor caminho de
+                                trabalho.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            A terapia online funciona de verdade?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Sim. A terapia online é tão eficaz quanto a presencial, desde que realizada em um
+                                ambiente reservado e
+                                com boa conexão. Muitas pessoas preferem essa modalidade pela praticidade e conforto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Como posso agendar uma sessão?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                O agendamento pode ser feito diretamente pelo formulário de contato ou através do
+                                WhatsApp.
+                                Após a solicitação, você receberá todas as informações para confirmar sua sessão.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Qual é a duração das sessões?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Cada sessão dura, em média, 50 minutos. Esse tempo é pensado para garantir espaço
+                                suficiente
+                                para trabalharmos suas questões com calma e profundidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            A terapia é indicada apenas em momentos de crise?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Não. A terapia é útil tanto em situações de crise quanto em processos de
+                                autoconhecimento, prevenção e
+                                fortalecimento emocional. Muitas pessoas buscam terapia para crescer pessoalmente, não
+                                apenas para lidar com problemas.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <div class="custom-shape-divider-bottom-1758130681">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
 
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    Qual é a duração das sessões?
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Cada sessão dura, em média, 50 minutos. Esse tempo é pensado para garantir espaço suficiente 
-                        para trabalharmos suas questões com calma e profundidade.
-                    </p>
+        <section id="contato">
+            <!-- Categoria e título centralizados -->
+            <div class="contato-header">
+                <p class="ct-categoria">Contato</p>
+                <h2 class="ct-titulo">Atendimento</h2>
+            </div>
+
+            <div class="contato-wrapper">
+
+                <!-- Mapa -->
+                <div class="contato-mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.422586626386!2d-49.2649736849423!3d-16.67893038812342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef7e85a2d3ebf%3A0x3e30c9e08c82a6db!2sGoi%C3%A2nia%2C%20GO%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1694918123456!5m2!1spt-BR!2sus"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    A terapia é indicada apenas em momentos de crise?
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Não. A terapia é útil tanto em situações de crise quanto em processos de autoconhecimento, prevenção e 
-                        fortalecimento emocional. Muitas pessoas buscam terapia para crescer pessoalmente, não apenas para lidar com problemas.
-                    </p>
+                <!-- Cartões + botão -->
+                <div class="contato-info">
+                    <div class="ct-blocos">
+                        <!-- Atendimento Presencial -->
+                        <div class="ct-bloco">
+                            <h3>Presencial</h3>
+                            <p class="ct-endereco">
+                                Rua Exemplo, 123 – Setor Central<br>
+                                Goiânia, GO – CEP 74000-000
+                            </p>
+                        </div>
+
+                        <!-- Atendimento Online -->
+                        <div class="ct-bloco">
+                            <h3>Online</h3>
+                            <p class="ct-endereco">
+                                Atendimento por videochamada via plataforma segura.<br>
+                                Flexível, adaptado à sua rotina.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Agendamento -->
+                    <a href="https://wa.me/5585988209392" target="_blank" class="ct-button">
+                        <i class="fab fa-whatsapp"></i> Agende Sua Sessão
+                    </a>
                 </div>
+
             </div>
+        </section>
 
-        </div>
-    </div>
-</section>
-
-<section id="contato">
-    <div class="contato-wrapper">
-
-        <!-- Mapa -->
-        <div class="contato-mapa">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.422586626386!2d-49.2649736849423!3d-16.67893038812342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef7e85a2d3ebf%3A0x3e30c9e08c82a6db!2sGoi%C3%A2nia%2C%20GO%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1694918123456!5m2!1spt-BR!2sus" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
-        <!-- Informações de contato -->
-        <div class="contato-info">
-            <p class="ct-categoria">Contato</p>
-            <h2 class="ct-titulo">Atendimento</h2>
-
-            <!-- Atendimento Presencial -->
-            <div class="ct-bloco">
-                <h3>Presencial</h3>
-                <p class="ct-endereco">
-                    Rua Exemplo, 123 – Setor Central<br>
-                    Goiânia, GO – CEP 74000-000
-                </p>
-            </div>
-
-            <!-- Atendimento Online -->
-            <div class="ct-bloco">
-                <h3>Online</h3>
-                <p class="ct-endereco">
-                    Atendimento por videochamada via plataforma segura.<br>
-                    Flexível, adaptado à sua rotina.
-                </p>
-            </div>
-
-            <a href="https://wa.me/5585988209392" target="_blank" class="ct-button">
-                Agende Sua Sessão
-            </a>
-        </div>
-        
-    </div>
-</section>
-
-
-
-        
-
-
-
-
-        
-
-
-        
 
     </main>
 
-<footer id="footer">
-    <div class="footer-wrapper">
-        <p class="ft-categoria">Contato</p>
-        <p>Email: kamylla@email.com</p>
-        <p>Telefone: (62) 9 8888-9999</p>
-        <p>Endereço: Rua Exemplo, 123 – Goiânia, GO</p>
-    </div>
-    <p class="ft-copy">&copy; 2025 Kamylla Balduíno | Todos os direitos reservados</p>
-</footer>
+    <footer id="footer">
+        <div class="footer-main container flex flex-wrap flex-between">
+
+            <!-- Lado esquerdo: logo, texto educativo e botão CTA -->
+            <div class="footer-left">
+                <h2 class="footer-logo">Kamylla Balduíno</h2>
+                <p class="footer-text">
+                    Investir na sua saúde emocional é essencial para viver com mais equilíbrio, clareza e bem-estar.
+                </p>
+                <a href="https://wa.me/5585988209392" class="footer-cta button" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agende sua sessão
+                </a>
+            </div>
+
+            <!-- Lado direito: contatos e redes sociais -->
+            <div class="footer-right flex flex-wrap">
+                <!-- Contatos -->
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <p>
+                        <a href="https://wa.me/5585988209392" target="_blank">
+                            <i class="fab fa-whatsapp"></i> (62) 99820-9392
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:contato@kamyllabalduino.com">
+                            <i class="fas fa-envelope"></i> contato@kamyllabalduino.com
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 – Goiânia, GO
+                    </p>
+                </div>
+
+
+                <!-- Redes sociais -->
+                <div class="footer-col">
+                    <h3>Siga-nos</h3>
+                    <p><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+                    <p><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+                    <p><a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rodapé discreto -->
+        <div class="footer-bottom text-center">
+            <p class="ft-copy">&copy; 2025 Kamylla Balduíno | Todos os direitos reservados</p>
+            <p class="ft-dev">Desenvolvido por Victor Melkor</p>
+        </div>
+    </footer>
+
 
 
 

@@ -15,7 +15,7 @@
 }
 
 /* =========================
-   HERO MEDIA (FOTO / VÍDEO)
+   HERO MEDIA (FOTO)
 ========================= */
 .hero-media {
     width: 100%;
@@ -64,7 +64,10 @@
 
 .cta-whatsapp.button,
 .cta-sobre.button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     width: 100%;
     text-align: center;
@@ -91,41 +94,18 @@
 .cta-sobre.button {
     border: 2px solid var(--color-dark-teal);
     color: var(--color-dark-teal);
+    background-color: transparent;
 }
 
 /* =========================
    HERO VIDEO / LIGHTBOX
 ========================= */
-.hero-video,
-.video-overlay,
-.video-wrapper,
-.video-thumbnail,
-.close-video {
-    box-sizing: border-box;
-}
-
-.hero-video {
-    width: 100%;
-    max-width: 720px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    margin-bottom: var(--spacing-md);
-}
-
-.video-thumbnail {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
-
 .video-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.85);
     display: none;
     justify-content: center;
@@ -139,6 +119,13 @@
     max-width: 900px;
 }
 
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
 .close-video {
     position: absolute;
     top: -2rem;
@@ -149,13 +136,6 @@
     border: none;
     cursor: pointer;
     z-index: 10;
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
 }
 
 /* =========================

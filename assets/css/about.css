@@ -3,6 +3,7 @@
 ========================= */
 
 #sobre {
+    position: relative;
     padding: var(--spacing-xl) var(--spacing-md);
     background-color: var(--color-terra-cotta);
     color: var(--color-bg);
@@ -53,6 +54,43 @@
     border-radius: 12px;
     object-fit: cover;
     margin: 0 auto;
+}
+
+.custom-shape-divider-top-1758130850 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1758130850 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 69px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1758130850 .shape-fill {
+    fill: var(--color-terra-cotta);
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1758130850 svg {
+        width: calc(100% + 1.3px);
+        height: 69px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1758130850 svg {
+        width: calc(100% + 1.3px);
+        height: 24px;
+    }
 }
 
 /* =========================

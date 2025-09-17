@@ -65,7 +65,7 @@
 .bf-card:hover,
 .bf-card:focus {
     transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* hover mais chamativo */
 }
 
 /* Ícone do card */
