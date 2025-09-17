@@ -1,0 +1,37 @@
+.animate-section {
+    opacity: 0;
+    transform: translateY(20px); /* valor base para "fade-up" */
+    transition: all 0.8s ease-out;
+}
+
+.animate-section.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-section.fade-left {
+    transform: translateX(-20px);
+}
+
+.animate-section.fade-left.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.animate-section.fade-right {
+    transform: translateX(20px);
+}
+
+.animate-section.fade-right.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.animate-section.zoom-in {
+    transform: scale(0.95);
+}
+
+.animate-section.zoom-in.show {
+    transform: scale(1);
+    opacity: 1;
+}

@@ -66,6 +66,7 @@ header {
 /* Menu aberto */
 .menu.show {
     transform: translateX(0); /* desliza suavemente para dentro da tela */
+    background-color: var(--color-dark-teal);
 }
 
 /* =========================
@@ -89,7 +90,7 @@ header {
 
 .menu li a {
     padding: 0.5rem 1rem;
-    color: var(--color-dark-teal);
+    color: var(--color-bg);
     transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
@@ -190,6 +191,10 @@ header {
     .menu a {
     font-size: 0.8rem;
 }
+
+    .menu li a {
+        color: var(--color-dark-teal);
+    }
 
 .menu a.active {
     border-bottom: 3px solid var(--color-dark-teal);
