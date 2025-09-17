@@ -1,62 +1,105 @@
 /* =========================
-   SOBRE MIM
+   SOBRE - SEÇÃO
 ========================= */
+
 #sobre {
-    width: 100vw;
-    min-height: 100vh;
-    background: url('../images/sobre-bg.jpg') center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: #333;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--color-terra-cotta);
+    color: var(--color-bg);
 }
 
-#sobre::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.6); /* camada de contraste */
-    z-index: 1;
-}
-
-#sobre .container {
-    position: relative;
-    z-index: 2;
-}
-
-#sobre article {
+.sobre-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 700px;
-    margin: auto;
+    align-items: center;
+    gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#sobre h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.sobre-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.sobre-categoria {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
     color: var(--color-dark-teal);
 }
 
-#sobre p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+.sobre-titulo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-bg);
 }
 
-#sobre details summary {
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--color-wine);
-    margin-top: 0.5rem;
+.sobre-texto {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-bg);
 }
 
-#sobre details[open] summary {
-    color: var(--color-terra-cotta);
+
+
+.sobre-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 0 auto;
 }
 
-#sobre details p {
-    margin-top: 0.5rem;
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets - 600px+ */
+@media (min-width: 37.5em) {
+    .sobre-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-xl);
+    }
+
+    .sobre-content {
+        flex: 1;
+        text-align: left;
+    }
+
+    .sobre-image {
+        flex: 1;
+    }
+
+    .sobre-titulo {
+        font-size: 1.95rem;
+    }
+}
+
+/* Desktops - 900px+ */
+@media (min-width: 56.25em) {
+    .sobre-titulo {
+        font-size: 2rem;
+    }
+
+    .sobre-texto {
+        font-size: 1.05rem;
+    }
+}
+
+/* Monitores grandes - 1200px+ */
+@media (min-width: 75em) {
+    .sobre-titulo {
+        font-size: 2.25rem;
+    }
+
+    .sobre-texto {
+        font-size: 1.125rem;
+    }
 }

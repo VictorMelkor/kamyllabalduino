@@ -1,0 +1,163 @@
+/* =========================
+   BF - BENEFÍCIOS
+========================= */
+
+/* Seção (ID já no HTML: #beneficios) */
+#beneficios {
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+    background-color: var(--color-bg);
+    color: var(--color-dark-teal);
+}
+
+/* Header da seção */
+.bf-header {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.bf-categoria {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-terra-cotta);
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+
+}
+
+.bf-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-dark-teal);
+}
+
+.bf-descricao {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-dark-teal);
+    margin: 0 auto;
+    max-width: 60ch;
+}
+
+/* Grid de cards - mobile first (1 coluna) */
+.bf-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    width: 100%;
+}
+
+/* Card */
+.bf-card {
+    background: none;
+    border-radius: 10px;
+    border: 1px solid var(--color-dark-teal);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    /* mantém fluxo vertical (ícone em cima) */
+}
+
+.bf-card:hover,
+.bf-card:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+/* Ícone do card */
+.bf-card-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.bf-card-icon svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    fill: var(--color-dark-teal); /* se quiser que ícones herdem cor */
+}
+
+/* Título e texto do card */
+.bf-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-terra-cotta);
+}
+
+.bf-card-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-dark-teal);
+    margin: 0;
+}
+
+/* Botões opcionais (se usar) */
+.bf-buttons {
+    margin-top: var(--spacing-xl);
+}
+
+.bf-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: var(--color-dark-teal);
+    color: var(--color-bg);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.bf-button:hover,
+.bf-button:focus {
+    background-color: var(--color-terra-cotta);
+    transform: translateY(-4px);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets - 600px+ (37.5em) -> 2 colunas */
+@media (min-width: 37.5em) {
+    .bf-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .bf-titulo {
+        font-size: 1.75rem;
+    }
+}
+
+/* Desktops - 900px+ (56.25em) -> 3 colunas */
+@media (min-width: 56.25em) {
+    .bf-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xl);
+    }
+
+    .bf-titulo {
+        font-size: 2rem;
+    }
+}
+
+/* Monitores grandes - 1200px+ (75em) */
+@media (min-width: 75em) {
+    .bf-titulo {
+        font-size: 2.25rem;
+    }
+
+    .bf-card-title {
+        font-size: 1.25rem;
+    }
+
+    .bf-card-content {
+        font-size: 1rem;
+    }
+}

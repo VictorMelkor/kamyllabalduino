@@ -1,63 +1,129 @@
 /* =========================
-   CONTATO
+   CT - CONTATO
 ========================= */
-#contato h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+
+#contato {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--color-dark-teal);
+    color: var(--color-bg);
 }
 
-#contato form {
+.contato-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    gap: var(--spacing-lg);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-#contato input[type="email"] {
-    padding: 0.5rem;
-    border: 1px solid var(--color-brown);
-    border-radius: 6px;
+.contato-mapa iframe {
     width: 100%;
-    transition: border-color var(--transition-fast);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-#contato input[type="email"]:focus {
-    border-color: var(--color-terra-cotta);
-    outline: 2px solid var(--color-dark-teal);
+.contato-info {
+    text-align: left;
 }
 
-#contato button {
-    padding: 0.5rem 1rem;
+.ct-categoria {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-terra-cotta);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+}
+
+.ct-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-bg);
+}
+
+.ct-bloco {
+    margin-bottom: var(--spacing-md);
+}
+
+.ct-bloco h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-terra-cotta);
+}
+
+.ct-endereco {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-bg);
+}
+
+.ct-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
     background-color: var(--color-terra-cotta);
     color: var(--color-bg);
-    border-radius: 6px;
-    transition: background-color var(--transition-fast);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
-#contato button:hover,
-#contato button:focus {
-    background-color: var(--color-wine);
-    outline: 2px solid var(--color-dark-teal);
-}
-
-#contato .social {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#contato .social a {
-    padding: 0.5rem 1rem;
-    background-color: rgba(229,225,221,0.5);
-    border-radius: 6px;
+.ct-button:hover,
+.ct-button:focus {
+    background-color: var(--color-light-teal);
     color: var(--color-dark-teal);
-    transition: background-color var(--transition-fast), color var(--transition-fast);
+    transform: translateY(-4px);
 }
 
-#contato .social a:hover,
-#contato .social a:focus {
-    background-color: var(--color-terra-cotta);
-    color: var(--color-bg);
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (min-width: 37.5em) {
+    .contato-wrapper {
+        flex-direction: row;
+        gap: var(--spacing-xl);
+        align-items: flex-start;
+    }
+
+    .contato-mapa, .contato-info {
+        flex: 1;
+    }
+
+    .contato-mapa iframe {
+        height: 350px;
+    }
+
+    .ct-titulo {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 56.25em) {
+    .ct-titulo {
+        font-size: 2rem;
+    }
+
+    .contato-mapa iframe {
+        height: 400px;
+    }
+}
+
+@media (min-width: 75em) {
+    .ct-titulo {
+        font-size: 2.25rem;
+    }
+
+    .ct-bloco h3 {
+        font-size: 1.25rem;
+    }
+
+    .ct-endereco {
+        font-size: 1.05rem;
+    }
+
+    .contato-mapa iframe {
+        height: 450px;
+    }
 }

@@ -1,315 +1,128 @@
 /* =========================
-   SERVIÇOS - MOBILE FIRST
+   AB - ABORDAGEM
 ========================= */
-#servicos {
-    position: relative;
+
+/* Seção (ID já no HTML: #abordagem) */
+#abordagem {
+    padding: var(--spacing-xl) var(--spacing-md);
     background-color: var(--color-dark-teal);
     color: var(--color-bg);
-    width: 100%;
-    padding: 4rem 1rem 6rem;
-    padding-top: 6rem;
 }
 
-#servicos2 {
-    position: relative;
-    background-color: var(--color-wine);
-    color: var(--color-bg);
-    width: 100%;
-    padding: 4rem 1rem 6rem;
-    padding-top: 10rem;
-}
-
-
-
-.servicos-categoria {
-    font-size: 0.8rem;
-    margin: 3rem 0 1rem 0;
-    border-left: 2px solid var(--color-terra-cotta);
-    padding-left: 0.3rem;
-    text-align: left;
-    color: var(--color-bg);
-}
-
-.servicos-titulo {
-    font-size: 2rem;
-    color: var(--color-bg);
-}
-
-.servicos-descricao {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    text-align: left;
-    color: var(--color-bg);
-}
-
-/* Grid mobile-first */
-.servicos-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0rem;
-}
-
-/* Conteúdo e cards */
-.servicos-conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Container da direita */
-.servicos-direita {
+/* Container flexível */
+.ab-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.servicos-direita img {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    border-radius: 20px;
-    object-fit: cover; /* mantém proporção e corta excesso */
+/* Header da seção (texto) */
+.ab-header {
+    text-align: center;
+    max-width: 600px;
 }
 
-/* Mobile: botão antes da imagem */
-.services-buttons,
-.services-buttons2 {
-    order: -1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.ab-categoria {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-terra-cotta);
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
 }
 
-.services-buttons .cta-whatsapp {
-    background-color: var(--color-terra-cotta);
-
+.ab-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-bg);
 }
 
-.services-buttons2 .cta-whatsapp {
-    background-color: var(--color-dark-teal);
-
+.ab-descricao {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-bg);
+    margin: 0 auto;
+    max-width: 60ch;
 }
 
-/* Cards */
-.card {
-    padding: 1rem;
-    background-color: var(--color-bg);
-    border-radius: 20px;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.card:hover,
-.card:focus-within {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    margin-bottom: 0.5rem;
-}
-
-/* =========================
-   LISTAS DE SERVIÇOS
-========================= */
-.services-list,
-.services-list2 li {
+/* Checklist */
+.ab-checklist {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 500px;
 }
 
-.services-list li,
-.services-list2 li {
-    color: var(--color-dark-teal);
-    position: relative;
-    padding-left: 2.5rem;
-    margin-bottom: 0.5rem;
+.ab-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.services-list li::before,
-.services-list2 li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--color-terra-cotta);
-    border-radius: 50%;
+/* Ícone SVG dentro do li */
+.ab-checklist .ab-icon {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.5rem;
-    color: var(--color-bg);
+    margin-top: 0.2rem; /* alinhamento visual com texto */
 }
 
-.services-list2 li::before {
-    border-radius: 10%;
-}
 
 /* =========================
-   CARD COLAPSÁVEL MOBILE
-========================= */
-.collapsible-card {
-    border-radius: 20px;
-    background-color: var(--color-bg);
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.services-preview li,
-.services-hidden li {
-    color: var(--color-dark-teal);
-    position: relative;
-    padding-left: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.services-preview li.fade {
-    opacity: 0.4;
-}
-
-.services-preview li::before,
-.services-hidden li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--color-terra-cotta);
-    border-radius: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.5rem;
-    color: var(--color-bg);
-}
-
-.services-hidden {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    margin-bottom: 0;
-}
-
-.collapsible-toggle {
-    background: none;
-    border: none;
-    display: block;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-    color: var(--color-dark-teal);
-}
-
-.collapsible-toggle .arrow {
-    margin-left: 0.5rem;
-}
-
-.collapsible-card.open .services-hidden {
-    max-height: 1000px;
-    opacity: 1;
-    margin-bottom: 0.5rem;
-}
-
-.collapsible-card.open .collapsible-toggle .arrow {
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1757465801 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1757465801 svg {
-    position: relative;
-    display: block;
-    width: calc(300% + 1.3px);
-    height: 214px;
-}
-
-.custom-shape-divider-top-1757465801 .shape-fill {
-    fill: var(--color-dark-teal);
-}
-
-/* =========================
-   MEDIA QUERIES
+   RESPONSIVIDADE
 ========================= */
 
-/* Tablets 768px+ */
-@media (min-width: 768px) {
-    .servicos-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: center;
+/* Tablets e desktop: duas colunas */
+@media (min-width: 56.25em) {
+    .ab-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .servicos-direita img {
-        max-width: 400px;
+    .ab-header {
+        text-align: left;
+        max-width: 50%;
     }
 
-    .services-buttons {
-        justify-content: center;
-        margin-top: 1.5rem;
-        order: 1;
+    .ab-checklist {
+        max-width: 45%;
     }
 
-    .services-buttons .cta-whatsapp,
-    .services-buttons2 .cta-whatsapp {
-        width: 50%;
-    }
-}
-
-/* Desktops 1024px+ */
-@media (min-width: 1024px) {
-    #servicos {
-        padding: 6rem 2rem 8rem;
-    }
-
-    .servicos-titulo {
+    .ab-titulo {
         font-size: 2rem;
     }
 
-    .servicos-descricao {
-        font-size: 1.125rem;
+    .ab-descricao {
+        font-size: 1.05rem;
     }
 
-    .servicos-direita img {
-        max-width: 500px;
+    .ab-checklist li {
+        font-size: 1rem;
     }
 }
 
-/* Monitores grandes 1200px+ */
-@media (min-width: 1200px) {
-    .servicos-titulo {
-        font-size: 2.5rem;
+/* Monitores grandes - 1200px+ */
+@media (min-width: 75em) {
+    .ab-titulo {
+        font-size: 2.25rem;
     }
 
-    .servicos-descricao {
-        font-size: 1.25rem;
+    .ab-descricao {
+        font-size: 1.1rem;
     }
 
-    .servicos-direita img {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .services-buttons .cta-whatsapp,
-    .services-buttons2 .cta-whatsapp {
-        width: 50%;
+    .ab-checklist li {
+        font-size: 1.05rem;
     }
 }
