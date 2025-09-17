@@ -63,7 +63,7 @@
     <header>
         <nav class="navbar  flex flex-center">
             <!-- Logo visível sempre -->
-            <a href="#" class="logo">Kamylla Balduíno</a>
+            <a href="#" class="logo"><img src="assets/images/logo1-azul.png" alt=""></a>
 
             <!-- Botão toggle -->
             <button class="menu-toggle" aria-label="Abrir menu">☰</button>
@@ -72,7 +72,7 @@
             <ul class="menu flex">
                 <!-- Logo só aparece no mobile -->
                 <li class="menu-logo">
-                    <a href="#" class="logo">Kamylla Balduíno</a>
+                    <a href="#hero" class="logo"><img src="assets/images/logo1-branco.png" alt=""></a>
                 </li>
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#como-funciona">Como funciona</a></li>
@@ -84,197 +84,187 @@
     </header>
 
 
-    <main>
-        <!-- Hero -->
-        <section id="hero" class="hero container flex flex-center flex-column animate-section fade-up" data-animate="fade-up">
+<main>
+    <!-- Hero -->
+    <section id="hero" class="hero container flex flex-center flex-column">
 
-            <!-- Foto da psicóloga -->
-            <div class="hero-media mb-md">
-                <img src="assets/images/02.jpg" alt="Kamylla Balduíno" class="hero-photo">
+        <!-- Foto da psicóloga (anima apenas a imagem) -->
+        <div class="hero-media mb-md animate-section fade-up" data-animate="fade-up">
+            <img src="assets/images/02.jpg" alt="Kamylla Balduíno" class="hero-photo">
+        </div>
+
+        <!-- Conteúdo: título, textos e botões (anima apenas o conteúdo) -->
+        <div class="hero-content flex flex-column flex-center animate-section fade-up" data-animate="fade-up">
+            <h1>Quando você entende o que sente, escolhe melhor o que faz</h1>
+
+            <p>
+                Aqui, você encontra um <strong>espaço seguro</strong>, <strong>ético e acolhedor</strong>
+                para olhar para si com <strong>profundidade</strong>.
+            </p>
+            <p>
+                Atendo <strong>adultos</strong> e <strong>casais</strong> que desejam viver
+                com mais autenticidade, saúde emocional e qualidade nas relações.
+            </p>
+            <p>
+                Trabalho com base em psicologia baseada em <strong>evidências</strong>, com
+                <strong>escuta ativa</strong>, <strong>sensibilidade</strong> e
+                <strong>compromisso</strong> com sua jornada.
+            </p>
+
+            <div class="hero-buttons flex flex-wrap gap-sm mt-md animate-section fade-up" data-animate="fade-up">
+                <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Fale Comigo
+                </a>
+                <button id="play-video-btn" class="cta-sobre button">
+                    <i class="fas fa-play"></i> Me conheça melhor
+                </button>
             </div>
+        </div>
 
-            <!-- Conteúdo: título, textos e botões -->
-            <div class="hero-content flex flex-column flex-center">
-                <h1>Quando você entende o que sente, escolhe melhor o que faz</h1>
+        <!-- Lightbox do vídeo (não animado) -->
+        <div id="video-lightbox" class="video-overlay" style="display:none;">
+            <div class="video-wrapper">
+                <button class="close-video" aria-label="Fechar vídeo">&times;</button>
+                <video controls>
+                    <source src="assets/videos/hero_video.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+            </div>
+        </div>
 
-                <p>
-                    Aqui, você encontra um <strong>espaço seguro</strong>, <strong>ético e acolhedor</strong>
-                    para olhar para si com <strong>profundidade</strong>.
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios">
+        <div class="container flex flex-column flex-center">
+
+            <!-- Título e descrição (anima apenas o header) -->
+            <div class="bf-header text-center animate-section fade-left" data-animate="fade-left">
+                <h2 class="bf-categoria">BENEFÍCIOS</h2>
+                <h2 class="bf-titulo">Por que iniciar sua terapia?</h2>
+                <p class="bf-descricao">
+                    A psicoterapia oferece recursos práticos e emocionais que podem transformar sua vida.
+                    Veja alguns dos benefícios que você pode conquistar ao iniciar esse processo.
                 </p>
-                <p>
-                    Atendo <strong>adultos</strong> e <strong>casais</strong> que desejam viver
-                    com mais autenticidade, saúde emocional e qualidade nas relações.
+            </div>
+
+            <!-- Grid de benefícios (cada card anima individualmente) -->
+            <div class="bf-grid">
+                <article class="bf-card animate-section fade-up" data-animate="fade-up">
+                    <h3 class="bf-card-title">Mais energia e motivação</h3>
+                    <p class="bf-card-content">
+                        Descubra estratégias para superar o desânimo e retomar o cuidado consigo no dia a dia.
+                    </p>
+                </article>
+
+                <article class="bf-card animate-section fade-up" data-animate="fade-up">
+                    <h3 class="bf-card-title">Presença e equilíbrio</h3>
+                    <p class="bf-card-content">
+                        Técnicas de atenção plena ajudam a reduzir a ansiedade e aumentar sua conexão com o
+                        presente.
+                    </p>
+                </article>
+
+                <article class="bf-card animate-section fade-up" data-animate="fade-up">
+                    <h3 class="bf-card-title">Clareza nas escolhas</h3>
+                    <p class="bf-card-content">
+                        Alinhe suas decisões ao que realmente importa para você, construindo uma vida mais
+                        significativa.
+                    </p>
+                </article>
+
+                <article class="bf-card animate-section fade-up" data-animate="fade-up">
+                    <h3 class="bf-card-title">Relacionamentos mais saudáveis</h3>
+                    <p class="bf-card-content">
+                        Desenvolva habilidades para se comunicar melhor e fortalecer seus vínculos pessoais.
+                    </p>
+                </article>
+
+                <article class="bf-card animate-section fade-up" data-animate="fade-up">
+                    <h3 class="bf-card-title">Autoconhecimento</h3>
+                    <p class="bf-card-content">
+                        Ganhe consciência sobre padrões de comportamento, sono e alimentação, ampliando suas
+                        escolhas.
+                    </p>
+                </article>
+
+                <article class="bf-card animate-section fade-up" data-animate="fade-up">
+                    <h3 class="bf-card-title">Espaço seguro</h3>
+                    <p class="bf-card-content">
+                        Um ambiente acolhedor para falar sobre seus sentimentos e se expressar sem julgamentos.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona">
+        <div class="custom-shape-divider-top-1758130046">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="container cf-wrapper">
+
+            <!-- Imagem (anima apenas a imagem) -->
+            <div class="cf-image animate-section fade-left" data-animate="fade-left">
+                <img src="assets/images/02.jpg" alt="Psicóloga em atendimento">
+            </div>
+
+            <!-- Conteúdo (anima apenas o conteúdo) -->
+            <div class="cf-content animate-section fade-right" data-animate="fade-right">
+                <h2 class="cf-categoria">COMO FUNCIONA</h2>
+                <h2 class="cf-titulo">Meu jeito de trabalhar</h2>
+                <p class="cf-texto">
+                    Ofereço um tratamento focado nos objetivos do paciente.
+                    No início do processo, vamos estabelecer juntos as metas
+                    e seguir em direção a elas, sempre respeitando seu tempo
+                    e suas necessidades.
                 </p>
-                <p>
-                    Trabalho com base em psicologia baseada em <strong>evidências</strong>, com
-                    <strong>escuta ativa</strong>, <strong>sensibilidade</strong> e
-                    <strong>compromisso</strong> com sua jornada.
+                <p class="cf-texto">
+                    A cada sessão, trabalhamos de forma colaborativa para que
+                    você desenvolva estratégias práticas e conquiste maior
+                    clareza, equilíbrio e bem-estar emocional.
                 </p>
 
-                <div class="hero-buttons flex flex-wrap gap-sm mt-md">
-                    <a href="https://wa.me/5585988209392" class="cta-whatsapp button" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Fale Comigo
-                    </a>
-                    <button id="play-video-btn" class="cta-sobre button">
-                        <i class="fas fa-play"></i> Me conheça melhor
-                    </button>
-                </div>
+                <a href="https://wa.me/5585988209392" target="_blank" class="cf-button">
+                    <i class="fab fa-whatsapp"></i> Fale Comigo
+                </a>
             </div>
 
-            <!-- Lightbox do vídeo -->
-            <div id="video-lightbox" class="video-overlay" style="display:none;">
-                <div class="video-wrapper">
-                    <button class="close-video" aria-label="Fechar vídeo">&times;</button>
-                    <video controls>
-                        <source src="assets/videos/hero_video.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeo.
-                    </video>
-                </div>
+        </div>
+    </section>
+
+    <!-- Abordagem -->
+    <section id="abordagem">
+        <div class="ab-container flex flex-column flex-center">
+
+            <!-- Texto da abordagem (anima o header) -->
+            <div class="ab-header text-left animate-section fade-up" data-animate="fade-up">
+                <p class="ab-categoria">Abordagem</p>
+                <h2 class="ab-titulo">Terapia Cognitivo-Comportamental</h2>
+                <p class="ab-descricao">
+                    Minha prática é baseada na Terapia Cognitivo-Comportamental (TCC), uma abordagem
+                    focada em compreender como pensamentos, emoções e comportamentos se relacionam.
+                    O objetivo é ajudar você a lidar melhor com desafios atuais, construindo estratégias
+                    práticas e eficazes para alcançar mudanças reais.
+                </p>
             </div>
 
-        </section>
-
-
-
-        <section id="beneficios" class="animate-section fade-left" data-animate="fade-left">
-
-            <div class="container flex flex-column flex-center">
-
-                <!-- Título e descrição -->
-                <div class="bf-header text-center">
-                    <h2 class="bf-categoria">BENEFÍCIOS</h2>
-                    <h2 class="bf-titulo">Por que iniciar sua terapia?</h2>
-                    <p class="bf-descricao">
-                        A psicoterapia oferece recursos práticos e emocionais que podem transformar sua vida.
-                        Veja alguns dos benefícios que você pode conquistar ao iniciar esse processo.
-                    </p>
-                </div>
-
-                <!-- Grid de benefícios -->
-                <div class="bf-grid">
-
-                    <!-- Card 1 -->
-                    <article class="bf-card">
-                        <h3 class="bf-card-title">Mais energia e motivação</h3>
-                        <p class="bf-card-content">
-                            Descubra estratégias para superar o desânimo e retomar o cuidado consigo no dia a dia.
-                        </p>
-                    </article>
-
-                    <!-- Card 2 -->
-                    <article class="bf-card">
-                        <h3 class="bf-card-title">Presença e equilíbrio</h3>
-                        <p class="bf-card-content">
-                            Técnicas de atenção plena ajudam a reduzir a ansiedade e aumentar sua conexão com o
-                            presente.
-                        </p>
-                    </article>
-
-                    <!-- Card 3 -->
-                    <article class="bf-card">
-                        <h3 class="bf-card-title">Clareza nas escolhas</h3>
-                        <p class="bf-card-content">
-                            Alinhe suas decisões ao que realmente importa para você, construindo uma vida mais
-                            significativa.
-                        </p>
-                    </article>
-
-                    <!-- Card 4 -->
-                    <article class="bf-card">
-                        <h3 class="bf-card-title">Relacionamentos mais saudáveis</h3>
-                        <p class="bf-card-content">
-                            Desenvolva habilidades para se comunicar melhor e fortalecer seus vínculos pessoais.
-                        </p>
-                    </article>
-
-                    <!-- Card 5 -->
-                    <article class="bf-card">
-                        <h3 class="bf-card-title">Autoconhecimento</h3>
-                        <p class="bf-card-content">
-                            Ganhe consciência sobre padrões de comportamento, sono e alimentação, ampliando suas
-                            escolhas.
-                        </p>
-                    </article>
-
-                    <!-- Card 6 -->
-                    <article class="bf-card">
-                        <h3 class="bf-card-title">Espaço seguro</h3>
-                        <p class="bf-card-content">
-                            Um ambiente acolhedor para falar sobre seus sentimentos e se expressar sem julgamentos.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="como-funciona" class="animate-section fade-right" data-animate="fade-right">
-            <div class="custom-shape-divider-top-1758130046">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        opacity=".25" class="shape-fill"></path>
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                        opacity=".5" class="shape-fill"></path>
-                    <path
-                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="container cf-wrapper">
-
-                <!-- Imagem -->
-                <div class="cf-image">
-                    <img src="assets/images/02.jpg" alt="Psicóloga em atendimento">
-                </div>
-
-                <!-- Conteúdo -->
-                <div class="cf-content">
-                    <h2 class="cf-categoria">COMO FUNCIONA</h2>
-                    <h2 class="cf-titulo">Meu jeito de trabalhar</h2>
-                    <p class="cf-texto">
-                        Ofereço um tratamento focado nos objetivos do paciente.
-                        No início do processo, vamos estabelecer juntos as metas
-                        e seguir em direção a elas, sempre respeitando seu tempo
-                        e suas necessidades.
-                    </p>
-                    <p class="cf-texto">
-                        A cada sessão, trabalhamos de forma colaborativa para que
-                        você desenvolva estratégias práticas e conquiste maior
-                        clareza, equilíbrio e bem-estar emocional.
-                    </p>
-
-                    <a href="https://wa.me/5585988209392" target="_blank" class="cf-button">
-                        <i class="fab fa-whatsapp"></i> Fale Comigo
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="abordagem" class="animate-section fade-up" data-animate="fade-up">
-
-            <div class="ab-container flex flex-column flex-center">
-
-                <!-- Texto da abordagem -->
-                <div class="ab-header text-left">
-                    <p class="ab-categoria">Abordagem</p>
-                    <h2 class="ab-titulo">Terapia Cognitivo-Comportamental</h2>
-                    <p class="ab-descricao">
-                        Minha prática é baseada na Terapia Cognitivo-Comportamental (TCC), uma abordagem
-                        focada em compreender como pensamentos, emoções e comportamentos se relacionam.
-                        O objetivo é ajudar você a lidar melhor com desafios atuais, construindo estratégias
-                        práticas e eficazes para alcançar mudanças reais.
-                    </p>
-                </div>
-
-                <!-- Checklist de pontos da abordagem -->
-                <ul class="ab-checklist">
+            <!-- Checklist de pontos da abordagem (anima a lista de pontos) -->
+            <ul class="ab-checklist animate-section fade-up" data-animate="fade-up">
                     <li>
                         <span class="ab-icon">
                             <!-- SVG leve representando "Foco no Presente" -->
@@ -318,196 +308,196 @@
                     </li>
                 </ul>
 
+        </div>
 
+        <div class="custom-shape-divider-bottom-1758130681">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="sobre-wrapper flex flex-column flex-center">
+
+            <!-- Conteúdo textual (anima conteúdo) -->
+            <div class="sobre-content animate-section fade-right" data-animate="fade-right">
+                <p class="sobre-categoria">Sobre Mim</p>
+                <h2 class="sobre-titulo">Kamylla Balduíno</h2>
+                <p class="sobre-texto">
+                    Sou psicóloga dedicada ao crescimento profissional e pessoal dos meus pacientes.
+                    Acredito que cada desafio pode ser transformado em oportunidade de evolução, e meu
+                    objetivo é criar um ambiente seguro e acolhedor, onde você possa explorar seu
+                    potencial e conquistar resultados reais. Meu trabalho combina empatia com estratégias
+                    comprovadas, focadas em seu desenvolvimento contínuo.
+                </p>
+                <p class="sobre-texto">
+                    Juntos, vamos estabelecer metas claras e trabalhar de forma prática para alcançá-las,
+                    respeitando seu ritmo e sua individualidade.
+                </p>
             </div>
 
-            <div class="custom-shape-divider-bottom-1758130681">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-                </svg>
+            <!-- Foto (anima a imagem separadamente) -->
+            <div class="sobre-image animate-section fade-left" data-animate="fade-left">
+                <img src="assets/images/02.jpg" alt="Kamylla Balduíno">
             </div>
-        </section>
 
+        </div>
+    </section>
 
-        <section id="sobre" class="animate-section fade-left" data-animate="fade-left">
-            <div class="sobre-wrapper flex flex-column flex-center">
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="custom-shape-divider-top-1758130850">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
 
-                <!-- Conteúdo textual -->
-                <div class="sobre-content">
-                    <p class="sobre-categoria">Sobre Mim</p>
-                    <h2 class="sobre-titulo">Kamylla Balduíno</h2>
-                    <p class="sobre-texto">
-                        Sou psicóloga dedicada ao crescimento profissional e pessoal dos meus pacientes.
-                        Acredito que cada desafio pode ser transformado em oportunidade de evolução, e meu
-                        objetivo é criar um ambiente seguro e acolhedor, onde você possa explorar seu
-                        potencial e conquistar resultados reais. Meu trabalho combina empatia com estratégias
-                        comprovadas, focadas em seu desenvolvimento contínuo.
-                    </p>
-                    <p class="sobre-texto">
-                        Juntos, vamos estabelecer metas claras e trabalhar de forma prática para alcançá-las,
-                        respeitando seu ritmo e sua individualidade.
-                    </p>
+        <div class="faq-wrapper animate-section fade-up" data-animate="fade-up">
+            <p class="faq-categoria">Perguntas Frequentes</p>
+            <h2 class="faq-titulo">Dúvidas Comuns</h2>
+
+            <div class="faq-accordion">
+
+                <div class="faq-item animate-section fade-up" data-animate="fade-up">
+                    <button class="faq-question" aria-expanded="false">
+                        Como funciona o primeiro atendimento?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            No primeiro encontro, vamos conversar sobre sua história, suas necessidades e o que você
+                            espera da terapia.
+                            É um espaço inicial para entender suas demandas e definir, juntos, o melhor caminho de
+                            trabalho.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Foto -->
-                <div class="sobre-image">
-                    <img src="assets/images/02.jpg" alt="Kamylla Balduíno">
+                <div class="faq-item animate-section fade-up" data-animate="fade-up">
+                    <button class="faq-question" aria-expanded="false">
+                        A terapia online funciona de verdade?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sim. A terapia online é tão eficaz quanto a presencial, desde que realizada em um
+                            ambiente reservado e
+                            com boa conexão. Muitas pessoas preferem essa modalidade pela praticidade e conforto.
+                        </p>
+                    </div>
                 </div>
 
-            </div>
-
-
-        </section>
-
-
-        <section id="faq" class="animate-section fade-right" data-animate="fade-right">
-            <div class="custom-shape-divider-top-1758130850">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="faq-wrapper">
-                <p class="faq-categoria">Perguntas Frequentes</p>
-                <h2 class="faq-titulo">Dúvidas Comuns</h2>
-
-                <div class="faq-accordion">
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Como funciona o primeiro atendimento?
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                No primeiro encontro, vamos conversar sobre sua história, suas necessidades e o que você
-                                espera da terapia.
-                                É um espaço inicial para entender suas demandas e definir, juntos, o melhor caminho de
-                                trabalho.
-                            </p>
-                        </div>
+                <div class="faq-item animate-section fade-up" data-animate="fade-up">
+                    <button class="faq-question" aria-expanded="false">
+                        Como posso agendar uma sessão?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            O agendamento pode ser feito diretamente pelo formulário de contato ou através do
+                            WhatsApp.
+                            Após a solicitação, você receberá todas as informações para confirmar sua sessão.
+                        </p>
                     </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            A terapia online funciona de verdade?
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Sim. A terapia online é tão eficaz quanto a presencial, desde que realizada em um
-                                ambiente reservado e
-                                com boa conexão. Muitas pessoas preferem essa modalidade pela praticidade e conforto.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Como posso agendar uma sessão?
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                O agendamento pode ser feito diretamente pelo formulário de contato ou através do
-                                WhatsApp.
-                                Após a solicitação, você receberá todas as informações para confirmar sua sessão.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Qual é a duração das sessões?
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Cada sessão dura, em média, 50 minutos. Esse tempo é pensado para garantir espaço
-                                suficiente
-                                para trabalharmos suas questões com calma e profundidade.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            A terapia é indicada apenas em momentos de crise?
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Não. A terapia é útil tanto em situações de crise quanto em processos de
-                                autoconhecimento, prevenção e
-                                fortalecimento emocional. Muitas pessoas buscam terapia para crescer pessoalmente, não
-                                apenas para lidar com problemas.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="custom-shape-divider-bottom-1758130681">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-                </svg>
-            </div>
-        </section>
-
-        <section id="contato" class="animate-section fade-up" data-animate="fade-left">
-            <!-- Categoria e título centralizados -->
-            <div class="contato-header">
-                <p class="ct-categoria">Contato</p>
-                <h2 class="ct-titulo">Atendimento</h2>
-            </div>
-
-            <div class="contato-wrapper">
-
-                <!-- Mapa -->
-                <div class="contato-mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.422586626386!2d-49.2649736849423!3d-16.67893038812342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef7e85a2d3ebf%3A0x3e30c9e08c82a6db!2sGoi%C3%A2nia%2C%20GO%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1694918123456!5m2!1spt-BR!2sus"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
                 </div>
 
-                <!-- Cartões + botão -->
-                <div class="contato-info">
-                    <div class="ct-blocos">
-                        <!-- Atendimento Presencial -->
-                        <div class="ct-bloco">
-                            <h3>Presencial</h3>
-                            <p class="ct-endereco">
-                                Rua Exemplo, 123 – Setor Central<br>
-                                Goiânia, GO – CEP 74000-000
-                            </p>
-                        </div>
-
-                        <!-- Atendimento Online -->
-                        <div class="ct-bloco">
-                            <h3>Online</h3>
-                            <p class="ct-endereco">
-                                Atendimento por videochamada via plataforma segura.<br>
-                                Flexível, adaptado à sua rotina.
-                            </p>
-                        </div>
+                <div class="faq-item animate-section fade-up" data-animate="fade-up">
+                    <button class="faq-question" aria-expanded="false">
+                        Qual é a duração das sessões?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Cada sessão dura, em média, 50 minutos. Esse tempo é pensado para garantir espaço
+                            suficiente
+                            para trabalharmos suas questões com calma e profundidade.
+                        </p>
                     </div>
+                </div>
 
-                    <!-- Botão de Agendamento -->
-                    <a href="https://wa.me/5585988209392" target="_blank" class="ct-button">
-                        <i class="fab fa-whatsapp"></i> Agende Sua Sessão
-                    </a>
+                <div class="faq-item animate-section fade-up" data-animate="fade-up">
+                    <button class="faq-question" aria-expanded="false">
+                        A terapia é indicada apenas em momentos de crise?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Não. A terapia é útil tanto em situações de crise quanto em processos de
+                            autoconhecimento, prevenção e
+                            fortalecimento emocional. Muitas pessoas buscam terapia para crescer pessoalmente, não
+                            apenas para lidar com problemas.
+                        </p>
+                    </div>
                 </div>
 
             </div>
-        </section>
+        </div>
 
+        <div class="custom-shape-divider-bottom-1758130681">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
-    </main>
+    <!-- Contato -->
+    <section id="contato">
+        <!-- Categoria e título centralizados (anima header) -->
+        <div class="contato-header animate-section fade-up" data-animate="fade-up">
+            <p class="ct-categoria">Contato</p>
+            <h2 class="ct-titulo">Atendimento</h2>
+        </div>
+
+        <div class="contato-wrapper">
+
+            <!-- Mapa (anima somente o cartão do mapa) -->
+            <div class="contato-mapa animate-section fade-left" data-animate="fade-left">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.422586626386!2d-49.2649736849423!3d-16.67893038812342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef7e85a2d3ebf%3A0x3e30c9e08c82a6db!2sGoi%C3%A2nia%2C%20GO%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1694918123456!5m2!1spt-BR!2sus"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Cartões + botão (anima apenas a área de informações) -->
+            <div class="contato-info animate-section fade-right" data-animate="fade-right">
+                <div class="ct-blocos">
+                    <!-- Atendimento Presencial -->
+                    <div class="ct-bloco">
+                        <h3>Presencial</h3>
+                        <p class="ct-endereco">
+                            Rua Exemplo, 123 – Setor Central<br>
+                            Goiânia, GO – CEP 74000-000
+                        </p>
+                    </div>
+
+                    <!-- Atendimento Online -->
+                    <div class="ct-bloco">
+                        <h3>Online</h3>
+                        <p class="ct-endereco">
+                            Atendimento por videochamada via plataforma segura.<br>
+                            Flexível, adaptado à sua rotina.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Botão de Agendamento -->
+                <a href="https://wa.me/5585988209392" target="_blank" class="ct-button">
+                    <i class="fab fa-whatsapp"></i> Agende Sua Sessão
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
 
     <footer id="footer" class="animate-section fade-up" data-animate="fade-up">
         <div class="footer-main container flex flex-wrap flex-between">
 
             <!-- Lado esquerdo: logo, texto educativo e botão CTA -->
             <div class="footer-left">
-                <h2 class="footer-logo">Kamylla Balduíno</h2>
+                <a href="#hero"><img src="assets/images/logo2-laranja.png" class="" alt=""></a>
                 <p class="footer-text">
                     Investir na sua saúde emocional é essencial para viver com mais equilíbrio, clareza e bem-estar.
                 </p>
@@ -539,7 +529,7 @@
 
                 <!-- Redes sociais -->
                 <div class="footer-col">
-                    <h3>Siga-nos</h3>
+                    <h3>Redes Sociais</h3>
                     <p><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
                     <p><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
                     <p><a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>

@@ -17,37 +17,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     gap: var(--spacing-lg);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1 1 300px;
     min-width: 250px;
     max-height: fit-content;
     margin-bottom: var(--spacing-md);
+    
 }
 
-.footer-logo {
-    font-family: var(--font-primary);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-bg);
-}
 
 .footer-text {
     margin-bottom: var(--spacing-md);
     line-height: 1.5;
     color: var(--color-bg);
-    width: 80%;
+    width: 100%;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .footer-cta.button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.65rem 1.25rem;
     border-radius: 10px;
@@ -56,7 +56,11 @@
     font-weight: 600;
     font-size: 0.95rem;
     transition: background-color var(--transition-fast), transform var(--transition-fast);
+    width: 100%;
 }
+
+
+
 
 .footer-cta.button:hover,
 .footer-cta.button:focus {
@@ -72,8 +76,11 @@
     gap: var(--spacing-xl);
     flex-wrap: wrap;
     min-width: 250px;
-    max-height: fit-content
+    max-height: fit-content;
+    text-align: center;
 }
+
+
 
 .footer-col h3 {
     font-size: 0.95rem;
@@ -121,29 +128,36 @@
     .footer-main {
         flex-direction: column;
         align-items: flex-start;
+        
+    }
+
+    .footer-left img {
+        margin: auto;
+        margin-bottom: 1rem;
     }
 
     .footer-right {
         flex-direction: row;
         justify-content: center;
         gap: var(--spacing-xl);
+        margin: auto;
     }
 
     .footer-left,
     .footer-right {
-        min-width: 100%;
+        justify-content: center;
     }
 
-    .footer-cta.button {
-        width: 100%;
+    .footer-cta.button,
+    .footer-text {
         justify-content: center;
+        margin: 0.5rem auto;
+        width: 50%;
     }
 
     .footer-left {
         margin-bottom: var(--spacing-sm);
     }
 
-    .footer-text {
-        width: 100%;
-    }
+
 }
